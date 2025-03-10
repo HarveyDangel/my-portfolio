@@ -6,16 +6,16 @@ export default function Contact() {
 		<>
 			<footer
 				id="contact"
-				className="flex w-full flex-col justify-center bg-[#232C3D] p-[70px]"
+				className="flex w-full flex-col justify-center bg-[#232C3D] px-[20px] py-[50px] lg:p-[70px]"
 			>
 				{/* title */}
 				<div className="mb-[20px] flex justify-center">
-					<h1 className="flex items-center text-[40px] font-bold">
+					<h1 className="flex items-center text-[36px] lg:text-[40px] font-bold">
 						Contact Me
 					</h1>
 				</div>
 				{/* main contact details */}
-				<div className="flex justify-between py-[20px] font-normal">
+				<div className="flex flex-col lg:flex-row gap-[20px] lg:justify-between py-[20px] font-normal">
 					<div className="flex items-center gap-[10px]">
 						<MapPinIcon className="size-[38px]" />
 						<p>
@@ -38,7 +38,8 @@ export default function Contact() {
 						<p>+6390-9999-9999</p>
 					</div>
 				</div>
-				<div className="flex items-end justify-between pt-[70px] font-thin text-[24]">
+
+				<div className="flex flex-col-reverse items-center lg:flex-row lg:items-end gap-[20px] lg:justify-between pt-[70px] font-thin text-[24]">
 					<p>© 2025 All rights reserved.</p>
 					<div className="flex gap-[40px]">
 						{/* <a

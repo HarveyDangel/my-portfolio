@@ -6,8 +6,8 @@ import Contact from "./components/contact";
 
 export default function Home() {
   return (
-    <div>
-      <div className="flex flex-col bg-main h-screen w-screen bg-fixed">
+    <div className="w-screen h-screen">
+      <div className="lg:flex lg:flex-col bg-main h-screen w-screen bg-fixed">
         <Header></Header>
         <Intro></Intro>
       </div>

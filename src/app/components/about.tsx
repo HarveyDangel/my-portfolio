@@ -3,18 +3,18 @@ export default function About() {
 		<>
 			<div
 				id="about"
-				className="w-full max-w-7xl flex flex-col items-center justify-center p-[70px] place-self-center bg-[#232427] shadow-lg"
+				className="w-full max-w-7xl flex flex-col items-center justify-center px-[20px] py-[50px] lg:p-[70px] place-self-center bg-[#232427] shadow-lg"
 			>
 				{/* Container */}
-				<div className="mb-[20px] w-full">
-					<h1 className="flex items-center text-[40px] font-bold text-[#F7F9FC]">
+				<div className="mb-[20px] flex w-full justify-center lg:justify-start">
+					<h1 className="flex items-center text-[36px] lg:text-[40px] lg:text-left font-bold text-[#F7F9FC]">
 						About me
 					</h1>
 				</div>
 				{/* Cards flex-row*/}
-				<div className="w-full flex justify-between gap-[20px]">
+				<div className="w-full flex flex-col lg:flex-row justify-between gap-[10px] lg:gap-[20px]">
 					{/*Cards-left flex-column */}
-					<div className="flex flex-col gap-[20px] w-1/2">
+					<div className="flex flex-col gap-[10px] lg:gap-[20px] lg:w-1/2">
 						{/* Cards */}
 						<div
 							className="flex h-auto min-h-[350px] w-auto flex-grow rounded-[24px] border-2 border-[#D9D9D9] text-center text-[220px] animate-pulse"
@@ -32,7 +32,7 @@ export default function About() {
 					</div>
 
 					{/* Cards-right flex-column */}
-					<div className="flex flex-col gap-[20px] w-1/2">
+					<div className="flex flex-col gap-[10px] lg:gap-[20px] lg:w-1/2">
 						{/* cards */}
 						<div className="rounded-[24px] border border-[#d9d9d970] bg-[#D9D9D930] p-[20px] text-[20px] text-wrap shadow-md">
 							<p className="">
