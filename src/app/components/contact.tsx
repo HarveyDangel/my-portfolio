@@ -24,7 +24,14 @@ export default function Contact() {
 					</div>
 					<div className="flex items-center gap-[10px]">
 						<EnvelopeIcon className="size-[38px]" />
-						<p>harveydangel@gmail.com</p>
+						<a
+							href="https://mail.google.com/mail/?view=cm&fs=1&to=harveydangel@gmail.com"
+							target="_blank"
+							rel="noopener noreferrer"
+							className=" hover:underline hover:text-[#50E3C2]"
+						>
+							harveydangel@gmail.com
+						</a>
 					</div>
 					<div className="flex items-center gap-[10px]">
 						<PhoneIcon className="size-[38px]" />
