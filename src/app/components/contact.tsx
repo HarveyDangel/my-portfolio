@@ -1,5 +1,5 @@
 import { EnvelopeIcon, MapPinIcon, PhoneIcon } from "@heroicons/react/24/solid";
-import { Facebook, Github, Linkedin } from "lucide-react";
+import { Github, Linkedin } from "lucide-react";
 
 export default function Contact() {
 	return (
