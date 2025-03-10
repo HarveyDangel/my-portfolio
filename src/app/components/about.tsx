@@ -36,19 +36,31 @@ export default function About() {
 						{/* cards */}
 						<div className="rounded-[24px] border border-[#d9d9d970] bg-[#D9D9D930] p-[20px] text-[20px] text-wrap shadow-md">
 							<p className="">
-								My expertise includes developing full-stack applications,
-								optimizing database performance, and creating responsive user
-								interfaces. I have experience working on real-world projects,
-								collaborating with teams, and following best coding practices to
-								build scalable applications.
+								I have experience in developing user interfaces for web
+								applications, focusing on creating responsive and intuitive
+								designs. Additionally, I have worked with databases to manage
+								and retrieve data efficiently. As part of the Malnutrition
+								Monitoring System (MMSGSM) project in collaboration with the
+								Provincial Health Office (PHO), I have contributed to building a
+								system that helps track and analyze nutritional data. Through
+								this project, I have collaborated with teams using version
+								control systems, followed coding standards to maintain clean and
+								organized code, and implemented best practices to enhance both
+								performance and user experience.
 							</p>
 						</div>
 						<div className="rounded-[24px] border border-[#d9d9d970] bg-[#D9D9D930] p-[20px] text-[20px] text-wrap shadow-md">
 							<p className="">
-								Beyond coding, I love exploring new tech trends, participating
-								in hackathons, and contributing to open-source projects. In my
-								free time, I enjoy playing strategy games, reading about AI
-								advancements, and hiking to reconnect with nature.
+								Beyond coding, I enjoy playing strategy games like Command &
+								Conquer: Generals, which challenges my tactical thinking and
+								resource management skills. I love the thrill of building bases,
+								managing armies, and executing strategic attacks to outmaneuver
+								opponents. The game’s diverse factions and unique playstyles
+								keep every match engaging and dynamic. When it comes to physical
+								activities, I prefer swimming because it’s both refreshing and a
+								full-body workout, helping me stay active without feeling overly
+								strenuous. The weightless feeling in the water also makes it a
+								great way to relax and clear my mind.
 							</p>
 						</div>
 						<div className="rounded-[24px] border border-[#d9d9d970] bg-[#D9D9D930] p-[20px] text-[20px] text-wrap shadow-md">

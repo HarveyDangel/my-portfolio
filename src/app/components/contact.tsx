@@ -6,7 +6,7 @@ export default function Contact() {
 		<>
 			<footer
 				id="contact"
-				className="flex w-full flex-col justify-center bg-[#232C3D] p-[70px] text-[#F7F9FC]"
+				className="flex w-full flex-col justify-center bg-[#232C3D] p-[70px]"
 			>
 				{/* title */}
 				<div className="mb-[20px] flex justify-center">
@@ -17,17 +17,17 @@ export default function Contact() {
 				{/* main contact details */}
 				<div className="flex justify-between py-[20px] font-normal">
 					<div className="flex items-center gap-[10px]">
-						<MapPinIcon className="size-[38px] text-[#F7F9FC]" />
+						<MapPinIcon className="size-[38px]" />
 						<p>
 							Brgy. Hugpa Biliran, Biliran <br /> Philippines
 						</p>
 					</div>
 					<div className="flex items-center gap-[10px]">
-						<EnvelopeIcon className="size-[38px] text-[#F7F9FC]" />
+						<EnvelopeIcon className="size-[38px]" />
 						<p>harveydangel@gmail.com</p>
 					</div>
 					<div className="flex items-center gap-[10px]">
-						<PhoneIcon className="size-[38px] text-[#F7F9FC]" />
+						<PhoneIcon className="size-[38px]" />
 						<p>+6390-9999-9999</p>
 					</div>
 				</div>
@@ -35,13 +35,13 @@ export default function Contact() {
 					<p>© 2025 All rights reserved.</p>
 					<div className="flex gap-[40px]">
 						<a
-							href="https://www.facebook.com/HarveyDangel"
+							href="https://www.facebook.com/profile.php?id=100007451268533"
 							className="size-[68px] rounded-full bg-[#545F7F] p-[10px] shadow-lg transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500"
 						>
 							<Facebook className="size-[48px] text-[#F7F9FC]" />
 						</a>
 						<a
-							href="https://www.linkedin.com/"
+							href="https://www.linkedin.com/in/harvey-dangel-a4b09b355/"
 							className="size-[68px] rounded-full bg-[#545F7F] p-[10px] shadow-lg transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500"
 						>
 							<Linkedin className="size-[48px] text-[#F7F9FC]" />
