@@ -22,11 +22,11 @@ export default function About() {
 						></div>
 						<div className="rounded-[24px] border border-[#d9d9d970] bg-[#D9D9D930] p-[20px] text-[20px] text-wrap shadow-md">
 							<p className="text-wrap">
-								I'm a passionate web developer and a 4th-year BSCS student at
+								{`I'm a passionate web developer and a 4th-year BSCS student at
 								BiPSU. I specialize in building interactive and efficient web
 								applications using Laravel, HTML, CSS, JavaScript, MySQL, and
 								PHP. I enjoy solving complex problems and continuously learning
-								new technologies to improve my craft.
+								new technologies to improve my craft.`}
 							</p>
 						</div>
 					</div>
@@ -36,7 +36,7 @@ export default function About() {
 						{/* cards */}
 						<div className="rounded-[24px] border border-[#d9d9d970] bg-[#D9D9D930] p-[20px] text-[20px] text-wrap shadow-md">
 							<p className="">
-								I have experience in developing user interfaces for web
+								{`I have experience in developing user interfaces for web
 								applications, focusing on creating responsive and intuitive
 								designs. Additionally, I have worked with databases to manage
 								and retrieve data efficiently. As part of the Malnutrition
@@ -46,12 +46,12 @@ export default function About() {
 								this project, I have collaborated with teams using version
 								control systems, followed coding standards to maintain clean and
 								organized code, and implemented best practices to enhance both
-								performance and user experience.
+								performance and user experience.`}
 							</p>
 						</div>
 						<div className="rounded-[24px] border border-[#d9d9d970] bg-[#D9D9D930] p-[20px] text-[20px] text-wrap shadow-md">
 							<p className="">
-								Beyond coding, I enjoy playing strategy games like Command &
+								{`Beyond coding, I enjoy playing strategy games like Command &
 								Conquer: Generals, which challenges my tactical thinking and
 								resource management skills. I love the thrill of building bases,
 								managing armies, and executing strategic attacks to outmaneuver
@@ -60,16 +60,16 @@ export default function About() {
 								activities, I prefer swimming because it’s both refreshing and a
 								full-body workout, helping me stay active without feeling overly
 								strenuous. The weightless feeling in the water also makes it a
-								great way to relax and clear my mind.
+								great way to relax and clear my mind.`}
 							</p>
 						</div>
 						<div className="rounded-[24px] border border-[#d9d9d970] bg-[#D9D9D930] p-[20px] text-[20px] text-wrap shadow-md">
 							<p className="">
-								My goal is to become a skilled full-stack developer and
+								{`My goal is to become a skilled full-stack developer and
 								eventually contribute to large-scale software solutions that
 								make a difference. I'm always open to new opportunities,
 								collaborations, and exciting challenges in the field of web
-								development.
+								development. `}
 							</p>
 						</div>
 					</div>

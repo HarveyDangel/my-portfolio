@@ -34,12 +34,12 @@ export default function Contact() {
 				<div className="flex items-end justify-between pt-[70px] font-thin text-[24]">
 					<p>© 2025 All rights reserved.</p>
 					<div className="flex gap-[40px]">
-						<a
+						{/* <a
 							href="https://www.facebook.com/profile.php?id=100007451268533"
 							className="size-[68px] rounded-full bg-[#545F7F] p-[10px] shadow-lg transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500"
 						>
 							<Facebook className="size-[48px] text-[#F7F9FC]" />
-						</a>
+						</a> */}
 						<a
 							href="https://www.linkedin.com/in/harvey-dangel-a4b09b355/"
 							className="size-[68px] rounded-full bg-[#545F7F] p-[10px] shadow-lg transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500"

@@ -7,7 +7,7 @@ export default function Intro() {
 			<div className="flex w-full items-center justify-between">
 				<div>
 					<h1 className="font-bold text-[64px]">
-						Hi! I'm <span className="text-[#50E3C2]">Harvey Dangel</span>,
+						Hi! I&apos;m <span className="text-[#50E3C2]">Harvey Dangel</span>,
 					</h1>
 					<h1 className="text-[40px]">an aspiring Web Developer.</h1>
 					<p className="text-[20px] mb-[10px]">
