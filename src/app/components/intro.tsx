@@ -32,7 +32,9 @@ export default function Intro() {
 				</div>
 				{/* group 2 */}
 				<div>
-					<div className="w-[200px] h-[200px] lg:w-[350px] lg:h-[350px] rounded-full border-12 border-[#50E3C2] text-center text-[220px] motion-safe:animate-pulse"></div>
+					<div className="w-[200px] h-[200px] lg:w-[350px] lg:h-[350px] rounded-full border-12 border-[#50E3C2] text-center text-[220px] motion-safe:animate-pulse">
+						<img src="url('../../public/images/avatar.png')" alt="avatar" />
+					</div>
 				</div>
 			</div>
 		</div>
