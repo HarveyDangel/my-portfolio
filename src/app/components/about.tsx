@@ -17,10 +17,10 @@ export default function About() {
 					<div className="flex flex-col gap-[10px] lg:gap-[20px] lg:w-1/2">
 						{/* Cards */}
 						<div
-							className="flex h-auto min-h-[350px] w-auto flex-grow rounded-[24px] border-2 border-[#D9D9D9] text-center text-[220px] animate-pulse"
+							className="flex h-auto min-h-[350px] w-auto flex-grow rounded-[24px] border-2 border-[#D9D9D9] text-center text-[220px] animate-pulse about-pic"
 							//style={backgroundStyle}
 						></div>
-						<div className="rounded-[24px] border border-[#d9d9d970] bg-[#D9D9D930] p-[20px] lg:text-[20px] text-wrap shadow-md">
+						<div className="rounded-[24px] border border-[#d9d9d970] bg-[#D9D9D930] p-[20px] lg:text-[20px] text-wrap shadow-lg">
 							<p className="text-wrap">
 								{`I'm a passionate web developer and a 4th-year BSCS student at
 								BiPSU. I specialize in building interactive and efficient web

@@ -21,6 +21,24 @@ body {
 
 }
 
+.avatar {
+  background-image: url('../../public/images/avatar.png'); /* Ensure this file is in public folder */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+
+.about-pic{
+  background-image: url('../../public/images/bg-1.png'); /* Ensure this file is in public folder */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+
 .bg-main {
   background-image: url('../../public/images/bg-1.jpg'); /* Ensure this file is in public folder */
   background-size: cover;
