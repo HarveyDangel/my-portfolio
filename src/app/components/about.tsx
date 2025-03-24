@@ -17,10 +17,10 @@ export default function About() {
 					<div className="flex flex-col gap-[10px] lg:gap-[20px] lg:w-1/2">
 						{/* Cards */}
 						<div
-							className="flex h-auto min-h-[350px] w-auto flex-grow rounded-[24px] border-2 border-[#D9D9D9] text-center text-[220px] animate-pulse about-pic"
+							className="flex h-auto min-h-[350px] w-auto flex-grow rounded-[8px] border border-[#D9D9D9] text-center text-[220px] about-pic"
 							//style={backgroundStyle}
 						></div>
-						<div className="rounded-[24px] border border-[#d9d9d970] bg-[#D9D9D930] p-[20px] lg:text-[20px] text-wrap shadow-lg">
+						<div className="rounded-[8px] border border-green-300/50 bg-gradient-to-tr from-green-950/50 to-green-300/50 p-[20px] lg:text-[16px] text-wrap shadow-lg">
 							<p className="text-wrap">
 								{`I'm a passionate web developer and a 4th-year BSCS student at
 								BiPSU. I specialize in building interactive and efficient web
@@ -34,7 +34,7 @@ export default function About() {
 					{/* Cards-right flex-column */}
 					<div className="flex flex-col gap-[10px] lg:gap-[20px] lg:w-1/2">
 						{/* cards */}
-						<div className="rounded-[24px] border border-[#d9d9d970] bg-[#D9D9D930] p-[20px] lg:text-[20px] text-wrap shadow-md">
+						<div className="rounded-[8px] border border-green-300/50 bg-gradient-to-tr from-green-950/50 to-green-300/50 p-[20px] lg:text-[16px] text-wrap shadow-lg">
 							<p className="">
 								{`I have experience in developing user interfaces for web
 								applications, focusing on creating responsive and intuitive
@@ -49,7 +49,7 @@ export default function About() {
 								performance and user experience.`}
 							</p>
 						</div>
-						<div className="rounded-[24px] border border-[#d9d9d970] bg-[#D9D9D930] p-[20px] lg:text-[20px] text-wrap shadow-md">
+						<div className="rounded-[8px] border border-green-300/50 bg-gradient-to-tr from-green-950/50 to-green-300/50 p-[20px] lg:text-[16px] text-wrap shadow-lg">
 							<p className="">
 								{`Beyond coding, I enjoy playing strategy games like Command &
 								Conquer: Generals, which challenges my tactical thinking and
@@ -63,8 +63,8 @@ export default function About() {
 								great way to relax and clear my mind.`}
 							</p>
 						</div>
-						<div className="rounded-[24px] border border-[#d9d9d970] bg-[#D9D9D930] p-[20px] lg:text-[20px] text-wrap shadow-md">
-							<p className="">
+						<div className="rounded-[8px] border border-green-300/50 bg-gradient-to-tr from-green-950/50 to-green-300/50 p-[20px] lg:text-[16px] text-wrap shadow-lg">
+							<p className="text-wrap">
 								{`My goal is to become a skilled full-stack developer and
 								eventually contribute to large-scale software solutions that
 								make a difference. I'm always open to new opportunities,
