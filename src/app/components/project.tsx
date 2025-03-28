@@ -3,11 +3,11 @@ export default function Project() {
 		<>
 			<div
 				id="project"
-				className="w-full max-w-[1280px] lg:h-screen flex flex-col px-[20px] py-[50px] lg:p-[70px] place-self-center bg-[#F7F9FC]"
+				className="w-full max-w-[1280px] lg:h-screen flex flex-col px-[20px] py-[50px] lg:p-[70px] place-self-center"
 			>
 				{/* Container */}
 				<div className="mb-[20px] w-full flex justify-center lg:justify-start">
-					<h1 className="flex items-center text-[36px] lg:text-[40px] font-bold text-[#232427]">
+					<h1 className="flex items-center text-[36px] lg:text-[40px] font-bold">
 						Project
 					</h1>
 				</div>
