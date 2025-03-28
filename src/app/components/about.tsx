@@ -11,10 +11,10 @@ export default function About() {
 						About me
 					</h1>
 					<div className="flex gap-[10px]">
-						<p className="font-bold text-[128px] text-[#e0fa8c] -mt-10">&quot;</p>
+						<p className="font-bold text-[128px] text-[#e0fa8c] -mt-10">{`"`}</p>
 						<p className="lg:text-[32px] shadow-text">
-							A 4th-year BSCS student at BiPSU, specializing in web development
-							using Laravel, HTML, CSS, JavaScript, MySQL, and PHP&quot;
+							{`A 4th-year BSCS student at BiPSU, specializing in web development
+							using Laravel, HTML, CSS, JavaScript, MySQL, and PHP"`}
 						</p>
 					</div>
 				</div>
