@@ -1,9 +1,11 @@
+import GlassPane from "./glasspane";
+
 export default function About() {
 	return (
 		<>
 			<div
 				id="about"
-				className="w-full max-w-7xl flex justify-center px-[20px] py-[50px] lg:p-[110px] place-self-center bg-[#232427] gap-[20px]"
+				className="w-full max-w-7xl flex justify-center px-[20px] py-[50px] lg:px-[110px] place-self-center bg-[#232427] gap-[20px]"
 			>
 				{/* Container */}
 				<div className="flex flex-col w-1/2 justify-center lg:justify-start">
@@ -27,7 +29,7 @@ export default function About() {
 							className="flex h-auto min-h-[350px] w-auto flex-grow rounded-[8px] border border-[#D9D9D9] text-center text-[220px] about-pic"
 							//style={backgroundStyle}
 						></div> */}
-						<div className="rounded-[8px] border-1 border-white/60 bg-gradient-to-tr from-white/10 to-white/30 p-[20px] lg:text-[16px] text-wrap">
+						<GlassPane>
 							<p className="text-wrap">
 								{`I'm a passionate web developer and a 4th-year BSCS student at
 								BiPSU. I specialize in building interactive and efficient web
@@ -35,8 +37,8 @@ export default function About() {
 								PHP. I enjoy solving complex problems and continuously learning
 								new technologies to improve my craft.`}
 							</p>
-						</div>
-						<div className="rounded-[8px] border border-white/60 bg-gradient-to-tr from-white/10 to-white/30 p-[20px] lg:text-[16px] text-wrap shadow-lg">
+						</GlassPane>
+						<GlassPane>
 							<p className="">
 								{`I have experience in developing user interfaces for web
 								applications, focusing on creating responsive and intuitive
@@ -50,7 +52,7 @@ export default function About() {
 								organized code, and implemented best practices to enhance both
 								performance and user experience.`}
 							</p>
-						</div>
+						</GlassPane>
 						{/* <div className="rounded-[8px] border border-green-300/50 bg-gradient-to-tr from-green-950/50 to-green-300/50 p-[20px] lg:text-[16px] text-wrap shadow-lg">
 							<p className="">
 								{`Beyond coding, I enjoy playing strategy games like Command &
@@ -65,7 +67,7 @@ export default function About() {
 								great way to relax and clear my mind.`}
 							</p>
 						</div> */}
-						<div className="rounded-[8px] border border-white/60 bg-gradient-to-tr from-white/10 to-white/30 p-[20px] lg:text-[16px] text-wrap shadow-lg">
+						<GlassPane>
 							<p className="text-wrap">
 								{`My goal is to become a skilled full-stack developer and
 								eventually contribute to large-scale software solutions that
@@ -73,7 +75,7 @@ export default function About() {
 								collaborations, and exciting challenges in the field of web
 								development. `}
 							</p>
-						</div>
+						</GlassPane>
 					</div>
 				</div>
 			</div>
