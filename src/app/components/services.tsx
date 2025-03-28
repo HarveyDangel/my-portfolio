@@ -1,5 +1,4 @@
 import GlassPane from "./glasspane";
-import Icon from "./icon";
 import TechStack from "./techstack";
 
 export default function Services() {
