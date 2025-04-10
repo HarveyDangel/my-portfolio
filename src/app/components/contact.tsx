@@ -35,7 +35,7 @@ export default function Contact() {
 					</div>
 					<div className="flex items-center gap-[10px]">
 						<PhoneIcon className="size-[38px]" />
-						<p>+6390-9999-9999</p>
+						<p>+6396-7137-9690</p>
 					</div>
 				</div>
 
