@@ -12,7 +12,7 @@ export default function Services() {
 					<div className="flex gap-[10px] lg:gap-[20px]">
 						<GlassPane>
                      <h1 className="text-[24px] text-center lg:text-[28px] font-bold text-[#F7F9FC] mb-[20px]">
-                        Web Development
+                        Software Development
                      </h1>
 							{`If you need a developer to handle the research and development of your website, I have the skills and experience to help.`}
 						</GlassPane>

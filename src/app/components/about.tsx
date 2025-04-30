@@ -15,7 +15,7 @@ export default function About() {
 					<div className="flex gap-[10px]">
 						<p className="font-bold text-[128px] text-[#e0fa8c] -mt-10">{`"`}</p>
 						<p className="lg:text-[32px] shadow-text">
-							{`A 4th-year BSCS student at BiPSU, specializing in web development
+							{`A 4th-year BSCS student at BiPSU, specializing in software development
 							using Laravel, HTML, CSS, JavaScript, MySQL, and PHP"`}
 						</p>
 					</div>
@@ -31,8 +31,8 @@ export default function About() {
 						></div> */}
 						<GlassPane>
 							<p className="text-wrap">
-								{`I'm a passionate web developer and a 4th-year BSCS student at
-								BiPSU. I specialize in building interactive and efficient web
+								{`I'm a passionate software developer and a 4th-year BSCS student at
+								BiPSU. I specialize in building interactive and efficient software
 								applications using Laravel, HTML, CSS, JavaScript, MySQL, and
 								PHP. I enjoy solving complex problems and continuously learning
 								new technologies to improve my craft.`}
