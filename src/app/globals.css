@@ -22,7 +22,7 @@ body {
 }
 
 .avatar {
-  background-image: url('../../public/images/avatar.png'); /* Ensure this file is in public folder */
+  background-image: url('../../public/images/avatar.png'); 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -31,7 +31,7 @@ body {
 }
 
 .about-pic{
-  background-image: url('../../public/images/bg-1.png'); /* Ensure this file is in public folder */
+  background-image: url('../../public/images/bg-1.png'); 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -40,10 +40,35 @@ body {
 }
 
 .bg-main {
-  background-image: url('../../public/images/bg-1.jpg'); /* Ensure this file is in public folder */
+  background-image: url('../../public/images/bg-1.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
   height: 100vh;
+}
+
+.mmsgsm-pic {
+  background-image: url('../../public/images/MMSGSM.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 30vh;
+}
+.eventms-pic {
+  background-image: url('../../public/images/EventMS.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 30vh;
+}
+.wpportfolio-pic {
+  background-image: url('../../public/images/WP.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 30vh;
 }

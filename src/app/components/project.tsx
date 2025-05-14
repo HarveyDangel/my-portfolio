@@ -14,38 +14,49 @@ export default function Project() {
 					</h1>
 				</div>
 
-				<div className="flex flex-col lg:flex-row lg:justify-between gap-[20px] w-full h-full">
+				{/* <div className="hover:scale-105 transition-transform duration-200 ease-in-out">
+					<Glasspane>
+						<div className="flex flex-col items-center justify-center">
+							<span className="text-3xl mb-2 text-center eventms-pic"></span>
+							<span className="text-sm font-medium text-center">Hello</span>
+						</div>
+					</Glasspane>
+				</div> */}
+
+				<div className="flex flex-col lg:flex-row lg:justify-between gap-[20px] w-full">
 					{/* Project Cards*/}
-					<div className="flex h-auto lg:w-1/3 flex-grow flex-col rounded-[8px] transition delay-50 duration-300 ease-in-out hover:-translate-y-1 hover:scale-105 ">
+					<div className="flex lg:w-1/3 flex-grow flex-col rounded-[8px] transition delay-50 duration-300 ease-in-out hover:-translate-y-1 hover:scale-105 ">
 						<Glasspane>
 							{/* Image */}
 
-							<div
-								className="flex min-h-[250px] h-2/3 w-full overflow-hidden text-center text-[220px]"
-								//  style={backgroundStyle}
-							></div>
+							<div className="flex w-full overflow-hidden text-center eventms-pic">
+								{/* <div className=""></div> */}
+							</div>
 							{/* Details */}
 							<div className="h-min-[200px] flex h-auto flex-grow flex-col text-[20px] font-bold text-[#F7F9FC]">
 								<p className="">
 									Project Title: <span>EventMS</span>
 								</p>
 								<p className="truncate text-[16px] font-normal">
-									<span>An event management system for BiPSU Organization </span>
+									<span>
+										An event management system for BiPSU Organization{" "}
+									</span>
 								</p>
 							</div>
 						</Glasspane>
 					</div>
 
-					<div className="flex h-auto lg:w-1/3 flex-grow flex-col rounded-[8px] transition delay-50 duration-300 ease-in-out hover:-translate-y-1 hover:scale-105 ">
+					<div className="flex lg:w-1/3 flex-grow flex-col rounded-[8px] transition delay-50 duration-300 ease-in-out hover:-translate-y-1 hover:scale-105 ">
 						<Glasspane>
-							{/* Image */}
+					{/* Image */}
 
-							<div
-								className="flex min-h-[250px] h-2/3 w-full overflow-hidden text-center text-[220px]"
-								//  style={backgroundStyle}
-							></div>
-							{/* Details */}
-							<div className="h-min-[200px] flex h-auto flex-grow flex-col text-[20px] font-bold text-[#F7F9FC]">
+					<div
+								className="flex w-full overflow-hidden text-center mmsgsm-pic"
+							>
+								<div className=""></div>
+							</div>
+					{/* Details */}
+					<div className="h-min-[200px] flex h-auto flex-grow flex-col text-[20px] font-bold text-[#F7F9FC]">
 								<p className="">
 									Project Title: <span>MMSGSM</span>
 								</p>
@@ -59,27 +70,29 @@ export default function Project() {
 						</Glasspane>
 					</div>
 
-					<div className="flex h-auto lg:w-1/3 flex-grow flex-col rounded-[8px] transition delay-50 duration-300 ease-in-out hover:-translate-y-1 hover:scale-105 ">
+					<div className="flex lg:w-1/3 flex-grow flex-col rounded-[8px] transition delay-50 duration-300 ease-in-out hover:-translate-y-1 hover:scale-105 ">
 						<Glasspane>
-							{/* Image */}
+					{/* Image */}
 
-							<div
-								className="flex min-h-[250px] h-2/3 w-full overflow-hidden text-center text-[220px]"
-								//  style={backgroundStyle}
-							></div>
-							{/* Details */}
-							<div className="h-min-[200px] flex h-auto flex-grow flex-col text-[20px] font-bold text-[#F7F9FC]">
+					<div
+								className="flex w-full overflow-hidden text-center wpportfolio-pic"
+							>
+								<div className=""></div>
+							</div>
+					{/* Details */}
+					<div className="h-min-[200px] flex h-auto flex-grow flex-col text-[20px] font-bold text-[#F7F9FC]">
 								<p className="">
-									Project Title: <span>Chirper</span>
+									Project Title: <span>{`HARB's`}</span>
 								</p>
 								<p className="truncate text-[16px] font-normal">
 									<span>
-										A Posting App that is from Laravel bootcamp which allows users to post and share their stories
+										A Wordpress personal portfolio website.
 									</span>
 								</p>
 							</div>
 						</Glasspane>
 					</div>
+
 				</div>
 			</div>
 		</>

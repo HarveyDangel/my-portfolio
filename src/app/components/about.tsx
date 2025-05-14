@@ -5,23 +5,23 @@ export default function About() {
 		<>
 			<div
 				id="about"
-				className="w-full max-w-7xl flex justify-center px-[20px] py-[50px] lg:px-[110px] place-self-center bg-[#232427] gap-[20px]"
+				className="w-full max-w-7xl lg:flex justify-center px-[20px] py-[50px] lg:px-[110px] place-self-center bg-[#232427] gap-[20px]"
 			>
 				{/* Container */}
-				<div className="flex flex-col w-1/2 justify-center lg:justify-start">
-					<h1 className="flex items-center text-[36px] lg:text-[40px] lg:text-left font-bold text-[#F7F9FC] mb-[20px]">
+				<div className="lg:flex lg:flex-col lg:w-1/2 justify-center lg:justify-start">
+					<h1 className="lg:flex items-center text-[36px] lg:text-[40px] lg:text-left font-bold text-[#F7F9FC] mb-[20px]">
 						About me
 					</h1>
 					<div className="flex gap-[10px]">
 						<p className="font-bold text-[128px] text-[#e0fa8c] -mt-10">{`"`}</p>
 						<p className="lg:text-[32px] shadow-text">
-							{`A 4th-year BSCS student at BiPSU, specializing in software development
+							{`A BSCS graduate at BiPSU, specializing in software development
 							using Laravel, HTML, CSS, JavaScript, MySQL, and PHP"`}
 						</p>
 					</div>
 				</div>
 				{/* Cards flex-row*/}
-				<div className="w-1/2 flex flex-col lg:flex-row justify-between gap-[10px] lg:gap-[20px]">
+				<div className="lg:w-1/2 flex flex-col lg:flex-row justify-between gap-[10px] lg:gap-[20px]">
 					{/*Cards-left flex-column */}
 					<div className="flex flex-col gap-[10px] lg:gap-[20px]">
 						{/* Cards */}

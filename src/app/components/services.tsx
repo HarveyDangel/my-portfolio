@@ -9,7 +9,7 @@ export default function Services() {
 					<h1 className="place-self-end text-[36px] lg:text-[40px] lg:text-left font-bold text-[#F7F9FC] mb-[20px]">
 						What I do
 					</h1>
-					<div className="flex gap-[10px] lg:gap-[20px]">
+					<div className="flex flex-col lg:flex-row gap-[10px] lg:gap-[20px]">
 						<GlassPane>
                      <h1 className="text-[24px] text-center lg:text-[28px] font-bold text-[#F7F9FC] mb-[20px]">
                         Software Development
