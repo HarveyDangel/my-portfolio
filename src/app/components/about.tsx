@@ -30,7 +30,7 @@ export default function About() {
 							//style={backgroundStyle}
 						></div> */}
 						<GlassPane>
-							<p className="text-wrap">
+							<p className="text-wrap p-[16px]">
 								{`I'm a passionate software developer and a 4th-year BSCS student at
 								BiPSU. I specialize in building interactive and efficient software
 								applications using Laravel, HTML, CSS, JavaScript, MySQL, and
@@ -39,7 +39,7 @@ export default function About() {
 							</p>
 						</GlassPane>
 						<GlassPane>
-							<p className="">
+							<p className=" text-wrap p-[16px]">
 								{`I have experience in developing user interfaces for web
 								applications, focusing on creating responsive and intuitive
 								designs. Additionally, I have worked with databases to manage
@@ -68,7 +68,7 @@ export default function About() {
 							</p>
 						</div> */}
 						<GlassPane>
-							<p className="text-wrap">
+							<p className="text-wrap p-[16px]">
 								{`My goal is to become a skilled full-stack developer and
 								eventually contribute to large-scale software solutions that
 								make a difference. I'm always open to new opportunities,

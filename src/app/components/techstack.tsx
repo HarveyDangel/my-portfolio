@@ -136,7 +136,7 @@ const TechCard = ({ tech }: TechCardProps) => {
 	return (
 		<div className="hover:scale-105 transition-transform duration-200 ease-in-out">
 			<GlassPane>
-            <div className="flex flex-col items-center justify-center">
+            <div className="flex flex-col items-center justify-center p-[16px]">
 				<span className="text-3xl mb-2 text-center">{tech.icon}</span>
 				<span className="text-sm font-medium text-center">{tech.name}</span>
 
