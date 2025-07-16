@@ -1,4 +1,6 @@
 import Button from "./button";
+import GlassPane from "./glasspane";
+import Image from "next/image";
 
 export default function Intro() {
 	return (
@@ -10,7 +12,8 @@ export default function Intro() {
 				{/* group 1 */}
 				<div>
 					<h1 className="text-[36px] text-center lg:text-left font-bold lg:text-[58px]">
-					{`Hi! I'm `}<span className="text-[#D5FF4B]">{`Harvey Dangel`}</span>,
+						{`Hi! I'm `}
+						<span className="text-[#D5FF4B]">{`Harvey Dangel`}</span>,
 					</h1>
 					<h1 className="text-[24px] text-center lg:text-left lg:text-[40px]">
 						{`an aspiring Software Developer.`}
@@ -23,10 +26,20 @@ export default function Intro() {
 					</div>
 				</div>
 				{/* group 2 */}
-				<div>
-					<div className="w-[200px] h-[200px] lg:w-[350px] lg:h-[350px] rounded-full border-1 border-white/60 bg-white/10 text-center text-[220px] overflow-hidden">
-						<div className="avatar size-full"></div>
-					</div>
+				<div className="rounded-full overflow-hidden p-0">
+					<GlassPane>
+						<Image
+							src="/images/avatar.png"
+							alt="Profile Picture"
+							width={300}
+							height={300}
+							className="w-full object-cover border-1 border-white/60 rounded-full w-[200px] h-[200px] lg:w-[350px] lg:h-[350px]"
+							priority
+						/>
+						{/* <div className="w-[200px] h-[200px] lg:w-[350px] lg:h-[350px] rounded-full border-1 border-white/60 text-center text-[220px] overflow-hidden">
+							<div className="avatar size-full rounded-full"></div>
+						</div> */}
+					</GlassPane>
 				</div>
 			</div>
 		</div>

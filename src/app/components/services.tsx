@@ -4,7 +4,7 @@ import TechStack from "./techstack";
 export default function Services() {
 	return (
 		<>
-			<div className="w-full max-w-7xl flex justify-center px-[20px] py-[50px] lg:px-[110px] lg: place-self-center bg-[#232427] gap-[20px]">
+			<div className="w-full max-w-7xl flex justify-center px-[20px] py-[50px] lg:px-[110px] lg: place-self-center gap-[20px]">
 				<div className="w-full">
 					<h1 className="place-self-end text-[36px] lg:text-[40px] lg:text-left font-bold text-[#F7F9FC] mb-[20px]">
 						What I do

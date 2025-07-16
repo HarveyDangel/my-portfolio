@@ -5,7 +5,7 @@ export default function About() {
 		<>
 			<div
 				id="about"
-				className="w-full max-w-7xl lg:flex justify-center px-[20px] py-[50px] lg:px-[110px] place-self-center bg-[#232427] gap-[20px]"
+				className="w-full max-w-7xl lg:flex justify-center px-[20px] py-[50px] lg:px-[110px] place-self-center gap-[20px]"
 			>
 				{/* Container */}
 				<div className="lg:flex lg:flex-col lg:w-1/2 justify-center lg:justify-start">
@@ -21,7 +21,7 @@ export default function About() {
 					</div>
 				</div>
 				{/* Cards flex-row*/}
-				<div className="lg:w-1/2 flex flex-col lg:flex-row justify-between gap-[10px] lg:gap-[20px]">
+				<div className="lg:w-1/2 flex flex-col lg:flex-row justify-between gap-[10px] lg:gap-6">
 					{/*Cards-left flex-column */}
 					<div className="flex flex-col gap-[10px] lg:gap-[20px]">
 						{/* Cards */}

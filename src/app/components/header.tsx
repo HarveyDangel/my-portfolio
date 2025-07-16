@@ -1,4 +1,5 @@
 import Button from "./button";
+import Link from "next/link";
 
 export default function Header() {
 	return (
@@ -12,9 +13,12 @@ export default function Header() {
 
 				<div className="flex items-center gap-6 lg:gap-[28px]">
 					<nav className="hidden lg:flex gap-[30px] text-[18px]">
-						<a href="#home" className="hover:text-amber-400 transition-colors">
+						<Link href="/" className="hover:text-blue-500">
 							Home
-						</a>
+						</Link>
+						{/* <a href="#home" className="hover:text-amber-400 transition-colors">
+							Home
+						</a> */}
 						<a href="#about" className="hover:text-amber-400 transition-colors">
 							About
 						</a>
@@ -30,6 +34,10 @@ export default function Header() {
 						>
 							Contact
 						</a>
+
+						<Link href="/portfolio" className="hover:text-blue-500">
+							Portfolio
+						</Link>
 					</nav>
 				</div>
 				<Button className="lg:ml-4">
