@@ -33,7 +33,7 @@ export default function Intro() {
 							alt="Profile Picture"
 							width={300}
 							height={300}
-							className="w-full object-cover border-1 border-white/60 rounded-full w-[200px] h-[200px] lg:w-[350px] lg:h-[350px]"
+							className="object-cover border-1 border-white/60 rounded-full w-[200px] h-[200px] lg:w-[350px] lg:h-[350px]"
 							priority
 						/>
 						{/* <div className="w-[200px] h-[200px] lg:w-[350px] lg:h-[350px] rounded-full border-1 border-white/60 text-center text-[220px] overflow-hidden">
