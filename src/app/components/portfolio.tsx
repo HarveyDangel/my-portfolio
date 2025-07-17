@@ -49,7 +49,7 @@ export default function Portfolio() {
 			id="project"
 			className="min-h-screen w-full max-w-[1280px] py-12 px-4 sm:px-6 lg:px-8 place-self-center"
 		>
-			<div className="max-w-6xl mx-auto">
+			<div className="max-w-7xl mx-auto">
 				<h2 className="text-center text-[36px] lg:text-[40px] font-bold text-gray-900 dark:text-white mb-8">
 					My Projects
 				</h2>

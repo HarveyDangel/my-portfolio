@@ -1,33 +1,31 @@
 import type { Metadata } from "next";
-// import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { Lexend } from 'next/font/google';
+import { Lexend } from "next/font/google";
 
-const lexend = Lexend({ 
-  
-  variable: "--font-lexend",
-  subsets: ['latin'] 
+import Header from "./components/header";
+
+
+const lexend = Lexend({
+	variable: "--font-lexend",
+	subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  title: "Harb",
-  description: "Havey Dangel's portfolio",
+	title: "Harb",
+	description: "Havey Dangel's portfolio",
 };
 
 export default function RootLayout({
-
-  children,
-  
+	children,
 }: Readonly<{
-  children: React.ReactNode;
+	children: React.ReactNode;
 }>) {
-  return (
-    <html lang="en">
-      <body
-        className={`${lexend} antialiased`}
-      >
+	return (
+		<html lang="en">
+			<body className={`${lexend} antialiased`}>
+        <Header/>
         {children}
       </body>
-    </html>
-  );
+		</html>
+	);
 }

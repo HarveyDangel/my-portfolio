@@ -16,26 +16,23 @@ export default function Header() {
 						<Link href="/" className="hover:text-blue-500">
 							Home
 						</Link>
-						{/* <a href="#home" className="hover:text-amber-400 transition-colors">
-							Home
-						</a> */}
-						<a href="#about" className="hover:text-amber-400 transition-colors">
+						<Link href="/#about" className="hover:text-blue-500 transition-colors">
 							About
-						</a>
-						<a
-							href="#project"
-							className="hover:text-amber-400 transition-colors"
+						</Link>
+						<Link
+							href="/#project"
+							className="hover:text-blue-500 transition-colors"
 						>
 							Projects
-						</a>
-						<a
+						</Link>
+						<Link
 							href="#contact"
-							className="hover:text-amber-400 transition-colors"
+							className="hover:text-blue-500 transition-colors"
 						>
 							Contact
-						</a>
+						</Link>
 
-						<Link href="/portfolio" className="hover:text-blue-500">
+						<Link href="/project" className="hover:text-blue-500">
 							Portfolio
 						</Link>
 					</nav>

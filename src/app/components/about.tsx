@@ -31,10 +31,13 @@ export default function About() {
 						></div> */}
 						<GlassPane>
 							<p className="text-wrap p-[16px]">
-								{`I'm a passionate software developer and a 4th-year BSCS student at
+								{`I'm a passionate software developer and a BSCS graduate in
 								BiPSU. I specialize in building interactive and efficient software
-								applications using Laravel, HTML, CSS, JavaScript, MySQL, and
-								PHP. I enjoy solving complex problems and continuously learning
+								applications using`}{" "}
+								<strong className="italic">
+									Laravel, HTML, CSS, JavaScript, MySQL, and PHP
+								</strong>
+								{`. I enjoy solving complex problems and continuously learning
 								new technologies to improve my craft.`}
 							</p>
 						</GlassPane>
@@ -43,9 +46,8 @@ export default function About() {
 								{`I have experience in developing user interfaces for web
 								applications, focusing on creating responsive and intuitive
 								designs. Additionally, I have worked with databases to manage
-								and retrieve data efficiently. As part of the Malnutrition
-								Monitoring System (MMSGSM) project in collaboration with the
-								Provincial Health Office (PHO), I have contributed to building a
+								and retrieve data efficiently. As part of the`} <strong className="italic">Geo-Spatial Mapping and Monitoring System of Malnutrition Trends</strong> {`project in collaboration with the
+								Biliran Provincial Health Office (PHO), I have contributed to building a
 								system that helps track and analyze nutritional data. Through
 								this project, I have collaborated with teams using version
 								control systems, followed coding standards to maintain clean and

@@ -26,8 +26,10 @@ export default function Intro() {
 					</div>
 				</div>
 				{/* group 2 */}
-				<div className="rounded-full overflow-hidden p-0">
-					<GlassPane>
+				<div className="">
+					<GlassPane
+						className="rounded-full"
+					>
 						<Image
 							src="/images/avatar.png"
 							alt="Profile Picture"
