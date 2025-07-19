@@ -20,7 +20,7 @@ export default function Contact() {
 						<div className="flex items-center gap-[10px]">
 							<MapPinIcon className="size-[38px]" />
 							<p>
-								Brgy. Hugpa Biliran, Biliran <br /> Philippines
+								Biliran, Biliran <br /> Philippines
 							</p>
 						</div>
 						<div className="flex items-center gap-[10px]">

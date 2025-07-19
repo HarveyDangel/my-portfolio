@@ -32,9 +32,9 @@ export default function Header() {
 							Contact
 						</Link>
 
-						<Link href="/project" className="hover:text-blue-500">
+						{/* <Link href="/project" className="hover:text-blue-500">
 							Portfolio
-						</Link>
+						</Link> */}
 					</nav>
 				</div>
 				<Button className="lg:ml-4">

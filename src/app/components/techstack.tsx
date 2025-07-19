@@ -16,6 +16,7 @@ import {
 	SiCanva,
 	SiPhp,
 } from "react-icons/si";
+
 import { TechItem } from "./types/techStack";
 import GlassPane from "./glasspane";
 
@@ -115,16 +116,47 @@ const TechStack = () => {
 		// Add more items...
 	];
 
+	 // Group tech items by category
+    const groupedTech = techStack.reduce((acc, item) => {
+        const category = item.category;
+        if (!acc[category]) {
+            acc[category] = [];
+        }
+        acc[category].push(item);
+        return acc;
+    }, {} as Record<string, TechItem[]>);
+
+	     // Capitalize category names
+    const formatCategory = (category: string) => {
+        return category.charAt(0).toUpperCase() + category.slice(1);
+    };
+
 	return (
-		<div className="max-w-4xl mx-auto">
-			<h2 className="text-2xl font-bold mb-6 text-center">My Tech Stack</h2>
-			<div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-4">
-				{techStack.map((tech) => (
-					<TechCard key={tech.id} tech={tech} />
-				))}
-			</div>
-		</div>
-	);
+        <div className="max-w-6xl mx-auto py-16">
+            <h2 className="text-3xl font-bold mb-12 text-center">
+                My Tech Stack
+            </h2>
+            
+            <div className="space-y-12">
+                {Object.entries(groupedTech).map(([category, items]) => (
+                    <div key={category} className="flex flex-col lg:flex-row gap-6">
+                        <div className="lg:w-1/6 flex flex-col justify-center lg:items-start">
+                            <h3 className="text-xl font-semibold mb-4 lg:mb-0 text-center lg:text-right">
+                                {formatCategory(category)}
+                            </h3>
+                        </div>
+                        <div className="lg:w-5/6">
+                            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+                                {items.map((tech) => (
+                                    <TechCard key={tech.id} tech={tech} />
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </div>
+    );
 };
 
 // Separate card component for better typing

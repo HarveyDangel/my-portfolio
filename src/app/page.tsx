@@ -13,12 +13,13 @@ export default function Home() {
 				<div className="flex flex-col lg:h-screen w-screen bg-fixed">
 					<Intro />
 				</div>
-				<About />
-				<Services />
-				<Portfolio />
-				<Contact />
+				<div className="w-full lg:max-w-7xl flex flex-col justify-center place-self-center">
+					<About />
+					<Services />
+					<Portfolio />
+				</div>
+					<Contact />
 			</div>
 		</Suspense>
 	);
 }
-
