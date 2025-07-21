@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import GlassPane from "./glasspane";
-import { projects, ProjectDetails } from "../data/projects";
+import { projects} from "../data/projects";
 import { useTheme } from "../context/ThemeContext";
 
 export default function Portfolio() {
@@ -56,7 +56,7 @@ export default function Portfolio() {
 										))}
 									</div>
 									<div className="flex space-x-4">
-										{project.liveUrl && (
+										{/* {project.liveUrl && (
 											<a
 												href={project.liveUrl}
 												target="_blank"
@@ -65,7 +65,7 @@ export default function Portfolio() {
 											>
 												Live Demo
 											</a>
-										)}
+										)} */}
 										{project.githubUrl && (
 											<a
 												href={project.githubUrl}

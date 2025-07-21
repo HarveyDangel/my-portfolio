@@ -29,7 +29,7 @@ export const projects: ProjectDetails[] = [
   },
   {
     id: 3,
-    title: "Another Project",
+    title: "Wordpress Personal Portfolio",
     description: "A Wordpress personal portfolio website.",
     technologies: ["Wordpress", "Local WP"],
     imageUrl: "/images/WP.png",
