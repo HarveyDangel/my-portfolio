@@ -1,4 +1,7 @@
-"use client";
+"use client"
+
+import React from "react";
+
 import { ReactNode, useEffect, useRef } from "react";
 
 interface GlassPaneProps {

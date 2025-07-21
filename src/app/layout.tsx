@@ -3,6 +3,8 @@ import "./globals.css";
 import { Lexend } from "next/font/google";
 
 import Header from "./components/header";
+import { ThemeProvider } from './context/ThemeContext'
+import { ProjectProvider } from './context/ProjectContext'
 
 
 const lexend = Lexend({
@@ -23,8 +25,12 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body className={`${lexend} antialiased`}>
-        <Header/>
-        {children}
+        <ThemeProvider>
+          <ProjectProvider>
+            <Header/>
+            {children}
+          </ProjectProvider>
+        </ThemeProvider>
       </body>
 		</html>
 	);

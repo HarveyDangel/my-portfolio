@@ -1,54 +1,27 @@
+"use client"
+
 import React from "react";
 import Image from "next/image";
 import GlassPane from "./glasspane";
-
-interface ProjectDetails {
-	id: number;
-	title: string;
-	description: string;
-	technologies: string[];
-	imageUrl: string;
-	liveUrl?: string;
-	githubUrl?: string;
-}
-
-const projects: ProjectDetails[] = [
-	{
-		id: 1,
-		title: "Event Management System",
-		description: "An event management system for BiPSU Organization.",
-		technologies: ["Laravel", "Tailwind CSS", "Blade", "MySQL"],
-		imageUrl: "/images/EventMS.png", // Replace with your actual image filename
-		//   liveUrl: "https://project-demo.com",
-		githubUrl: "https://github.com/HarveyDangel/eventsmanagementsystem",
-	},
-	{
-		id: 2,
-		title: "Geo-Spatial Mapping and Monitoring System of Malnutrition Trends",
-		description:
-			"A malnutrition mapping and monitoring system for Biliran Provincial Health Office.",
-		technologies: ["HTML", "BootStrap CSS", "JavaScript", "PHP", "MySQL"],
-		imageUrl: "/images/MMSGSM.png", // Replace with your actual image filename
-		//   liveUrl: "https://another-project.com",
-		githubUrl: "https://github.com/HarveyDangel/malnutrition-monitoring-system",
-	},
-	{
-		id: 3,
-		title: "Another Project",
-		description: "A Wordpress personal portfolio website.",
-		technologies: ["Wordpress", "Local WP"],
-		imageUrl: "/images/WP.png", // Replace with your actual image filename
-		//   liveUrl: "https://another-project.com",
-		githubUrl: "https://github.com/HarveyDangel/wpPortfolio",
-	},
-];
+import { projects, ProjectDetails } from "../data/projects";
+import { useTheme } from "../context/ThemeContext";
 
 export default function Portfolio() {
+	const { darkMode, toggleDarkMode } = useTheme();
+
 	return (
 		<div
 			id="project"
-			className="min-h-screen w-full max-w-[1280px] py-12 px-4 sm:px-6 lg:px-8 place-self-center"
+			className={`min-h-screen w-full max-w-[1280px] py-12 px-4 sm:px-6 lg:px-8 place-self-center ${
+				darkMode ? "dark" : ""
+			}`}
 		>
+			<button
+				onClick={toggleDarkMode}
+				className="fixed top-4 right-4 p-2 rounded-full bg-gray-200 dark:bg-gray-800"
+			>
+				{darkMode ? "🌞" : "🌙"}
+			</button>
 			<div className="max-w-7xl mx-auto">
 				<h2 className="text-center text-[36px] lg:text-[40px] font-bold text-gray-900 dark:text-white mb-8">
 					My Projects
@@ -103,6 +76,12 @@ export default function Portfolio() {
 												GitHub
 											</a>
 										)}
+										<a
+											href={`/projects/${project.id}`}
+											className="text-blue-600 dark:text-blue-400 hover:underline mr-4"
+										>
+											View Details
+										</a>
 									</div>
 								</div>
 							</div>
