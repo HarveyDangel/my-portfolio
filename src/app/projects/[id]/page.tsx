@@ -2,9 +2,11 @@ import { projects } from "@/app/data/projects";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 
-export default function ProjectDetail({ params }: { params: { id: string } }) {
-  
-   const project = projects.find((p) => p.id === parseInt(params.id));
+// Make the component async
+export default async function ProjectDetail({ params }: { params: { id: string } }) {
+  // Wait for params to be available
+  const { id }= await params;
+  const project = projects.find((p) => p.id === parseInt(id));
 
   if (!project) {
     notFound();
