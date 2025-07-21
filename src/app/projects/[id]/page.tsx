@@ -2,11 +2,16 @@ import { projects } from "@/app/data/projects";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 
-// Make the component async
-export default async function ProjectDetail({ params }: { params: { id: string } }) {
-  // Wait for params to be available
-  const id = await params.id;
-  const project = projects.find((p) => p.id === parseInt(id));
+// Define the props interface
+interface ProjectDetailProps {
+  params: {
+    id: string;
+  };
+}
+
+export default async function ProjectDetail({ params }: ProjectDetailProps) {
+  // Convert id to number directly without awaiting
+  const project = projects.find((p) => p.id === parseInt(params.id));
 
   if (!project) {
     notFound();
