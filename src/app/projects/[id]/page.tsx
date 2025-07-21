@@ -1,31 +1,10 @@
 import { projects } from "@/app/data/projects";
 import { notFound } from "next/navigation";
 import Image from "next/image";
-import { Metadata } from 'next';
 
-// Define proper types for Next.js pages
-interface PageProps {
-  params: {
-    id: string;
-  };
-}
-
-// Generate metadata for the page
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  // Await the id parameter
-  const id = await params.id;
-  const project = projects.find((p) => p.id === parseInt(id));
+export default function ProjectDetail({ params }: { params: { id: string } }) {
   
-  return {
-    title: project ? `${project.title} | My Portfolio` : 'Project Not Found',
-    description: project?.description
-  };
-}
-
-export default async function ProjectDetail({ params }: PageProps) {
-  // Await the id parameter
-  const id = await params.id;
-  const project = projects.find((p) => p.id === parseInt(id));
+   const project = projects.find((p) => p.id === parseInt(params.id));
 
   if (!project) {
     notFound();
@@ -62,7 +41,7 @@ export default async function ProjectDetail({ params }: PageProps) {
           </div>
           
           <div className="flex space-x-4 mt-8">
-            {/* {project.liveUrl && (
+            {project.liveUrl && (
               <a
                 href={project.liveUrl}
                 target="_blank"
@@ -71,7 +50,7 @@ export default async function ProjectDetail({ params }: PageProps) {
               >
                 View Live Demo
               </a>
-            )} */}
+            )}
             {project.githubUrl && (
               <a
                 href={project.githubUrl}
