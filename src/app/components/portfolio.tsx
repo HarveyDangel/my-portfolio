@@ -16,12 +16,6 @@ export default function Portfolio() {
 				darkMode ? "dark" : ""
 			}`}
 		>
-			<button
-				onClick={toggleDarkMode}
-				className="fixed top-4 right-4 p-2 rounded-full bg-gray-200 dark:bg-gray-800"
-			>
-				{darkMode ? "🌞" : "🌙"}
-			</button>
 			<div className="max-w-7xl mx-auto">
 				<h2 className="text-center text-[36px] lg:text-[40px] font-bold text-gray-900 dark:text-white mb-8">
 					My Projects

@@ -35,7 +35,7 @@ export default function GlassPane({ children, className = "" }: GlassPaneProps) 
 			className={`rounded-[8px] border-1 border-white/60 bg-gradient-to-tr from-white/10 to-white/20 lg:text-[16px] shadow-lg text-wrap w-full
          relative
          before:absolute before:content-[''] before:w-[100px] before:h-[100px] 
-         before:bg-white/20 before:rounded-full before:blur-[50px] 
+         before:bg-gradient-to-tr before:from-indigo-600 before:to-green-600 before:rounded-full before:blur-[50px] 
          before:opacity-0 before:transition-opacity before:duration-300
          before:-z-10 before:left-[var(--x,50%)] before:top-[var(--y,50%)] 
          before:-translate-x-1/2 before:-translate-y-1/2

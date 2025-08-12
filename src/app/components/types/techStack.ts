@@ -4,5 +4,5 @@ export type TechItem = {
    id: string;
    name: string;
    icon: JSX.Element;
-   category: 'frontend' | 'backend' | 'tool' | 'language';
+   category: 'frontend' | 'backend' | 'development tool';
  };
