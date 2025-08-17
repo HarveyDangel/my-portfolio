@@ -129,25 +129,29 @@ const TechStack = () => {
 	};
 
 	return (
-		<div className="py-[36px] px-[12px] flex flex-col gap-[36px]">
-			<h3 className="text-gray-900 text-[32px] font-bold p-[12px] text-center">My Tech Stack</h3>
-			<div className="space-y-12">
-				{Object.entries(groupedTech).map(([category, items]) => (
-					<div key={category} className="flex flex-col lg:flex-row gap-6">
-						<div className="lg:w-1/6 flex flex-col justify-center lg:items-start">
-							<h3 className="text-[24px] font-semibold text-center">
-								{formatCategory(category)}
-							</h3>
-						</div>
-						<div className="">
-							<div className="grid grid-cols-3 gap-[12px]">
-								{items.map((tech) => (
-									<TechCard key={tech.id} tech={tech} />
-								))}
+		<div className="py-[36px] px-[12px] flex flex-col gap-6 lg:[54px]">
+			<div className="max-w-6xl mx-auto">
+				<h3 className="text-gray-900 text-[32px] font-bold p-[12px] text-center">
+					My Tech Stack
+				</h3>
+				<div className="space-y-12">
+					{Object.entries(groupedTech).map(([category, items]) => (
+						<div key={category} className="flex flex-col gap-[24px]">
+							<div className=" flex flex-col justify-center">
+								<h3 className="text-[24px] font-semibold text-center">
+									{formatCategory(category)}
+								</h3>
+							</div>
+							<div className="">
+								<div className="grid grid-cols-3 gap-[12px] justify-center">
+									{items.map((tech) => (
+										<TechCard key={tech.id} tech={tech} />
+									))}
+								</div>
 							</div>
 						</div>
-					</div>
-				))}
+					))}
+				</div>
 			</div>
 		</div>
 	);
@@ -161,11 +165,9 @@ type TechCardProps = {
 const TechCard = ({ tech }: TechCardProps) => {
 	return (
 		<>
-			<div>
-				<div className="flex flex-col items-center justify-center p-[16px]">
-					<span className="text-5xl mb-2 text-center">{tech.icon}</span>
-					<span className="text-[14px] font-medium text-center">{tech.name}</span>
-				</div>
+			<div className="flex flex-col items-center justify-center p-[16px]">
+				<span className="text-5xl mb-2 text-center">{tech.icon}</span>
+				<span className="text-[14px] font-medium text-center">{tech.name}</span>
 			</div>
 		</>
 	);
