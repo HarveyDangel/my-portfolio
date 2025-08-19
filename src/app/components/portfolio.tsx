@@ -4,10 +4,10 @@ import React from "react";
 import Image from "next/image";
 import GlassPane from "./glasspane";
 import { projects} from "../data/projects";
-import { useTheme } from "../context/ThemeContext";
+// import { useTheme } from "../context/ThemeContext";
 
 export default function Portfolio() {
-	const { darkMode, toggleDarkMode } = useTheme();
+	// const { darkMode, toggleDarkMode } = useTheme();
 
 	return (
 		<div
