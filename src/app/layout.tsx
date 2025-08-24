@@ -15,8 +15,8 @@ const lexend = Inter({
 export const metadata: Metadata = {
 	title: "Harb Coded",
 	description: "Havey Dangel's portfolio",
-	name: "google-site-verification",
-	content: "VBKAxCSDS72vHDR-AKQm3fuiTZuLVI8V9GyL6KTAZHI"
+	verification: {
+	  google: "VBKAxCSDS72vHDR-AKQm3fuiTZuLVI8V9GyL6KTAZHI"},
 };
 
 export default function RootLayout({
