@@ -7,7 +7,7 @@ import { ThemeProvider } from './context/ThemeContext'
 import { ProjectProvider } from './context/ProjectContext'
 
 
-const lexend = Inter({
+const inter = Inter({
 	variable: "--font-inter",
 	subsets: ["latin"],
 });
@@ -26,7 +26,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body className={`${lexend} antialiased`}>
+			<body className={`${inter} antialiased`}>
         <ThemeProvider>
           <ProjectProvider>
             {/* <Header/> */}
