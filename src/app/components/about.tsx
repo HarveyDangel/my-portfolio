@@ -31,8 +31,7 @@ export default function About() {
 						></div> */}
 						<GlassPane>
 							<p className="text-wrap p-[16px]">
-								{`I'm a passionate software developer and a BSCS graduate in
-								BiPSU. I specialize in building interactive and efficient software
+								{`I'm an aspiring software developer. I specialize in building interactive and efficient software
 								applications using`}{" "}
 								<strong className="italic">
 									Laravel, HTML, CSS, JavaScript, MySQL, and PHP
