@@ -31,10 +31,8 @@ import { Github, Linkedin } from "lucide-react";
 import { EnvelopeIcon, MapPinIcon, PhoneIcon } from "@heroicons/react/24/solid";
 import { motion } from "framer-motion";
 
-// import Image from "next/image";
-
-import TechStack from "./components/techStack";
 import Portfolio from "./components/projects";
+import TechStack from "./components/techstack";
 // import ScrollPage from "./components/scroll";
 import Hero from "./components/hero";
 
@@ -139,7 +137,6 @@ export default function Home() {
 						</div>
 					</div>
 					{/* TECH STACK */}
-					<div>{/* <ScrollPage /> */}</div>
 					<div>
 						<TechStack />
 					</div>

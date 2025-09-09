@@ -16,7 +16,7 @@ import {
 	SiPhp,
 } from "react-icons/si";
 
-import { TechItem } from "../components/types/techStack";
+import { TechItem } from "./types/techStack";
 import { motion } from "framer-motion";
 
 const TechStack = () => {
