@@ -12,7 +12,7 @@ export const projects: ProjectDetails[] = [
   {
     id: 1,
     title: "Event Management System",
-    description: "An event management system for BiPSU Organization.",
+    description: "A web-based platform designed for Biliran Province State University (BiPSU) to simplify event scheduling, tracking, and feedback collection. It allows students, faculty, and administrators to manage events efficiently with role-based access control.",
     technologies: ["Laravel", "Tailwind CSS", "Blade", "MySQL"],
     imageUrl: "/images/EventMS.png",
     // liveUrl: "https://project-demo.com",
@@ -21,7 +21,7 @@ export const projects: ProjectDetails[] = [
   {
     id: 2,
     title: "Geo-Spatial Mapping and Monitoring System of Malnutrition Trends",
-    description: "A malnutrition mapping and monitoring system for Biliran Provincial Health Office.",
+    description: "A web-based platform for mapping and monitoring malnutrition cases in Biliran Island using PHP, MySQL, and Leaflet.js with role-based access for DOH, PHO, and RHU.",
     technologies: ["HTML", "BootStrap CSS", "JavaScript", "PHP", "MySQL"],
     imageUrl: "/images/MMSGSM.png",
     // liveUrl: "https://another-project.com",
@@ -30,7 +30,7 @@ export const projects: ProjectDetails[] = [
   {
     id: 3,
     title: "Wordpress Personal Portfolio",
-    description: "A Wordpress personal portfolio website.",
+    description: "This project is a Personal Web Portfolio designed and developed using WordPress with WordPress Local as the development environment. The portfolio serves as an online presence to showcase my skills, projects, and experiences in web development.",
     technologies: ["Wordpress", "Local WP"],
     imageUrl: "/images/WP.png",
     // liveUrl: "https://another-project.com",
