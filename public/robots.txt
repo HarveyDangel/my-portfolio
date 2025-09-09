@@ -1,4 +1,9 @@
+# *
 User-agent: *
 Allow: /
 
+# Host
+Host: https://harb-coded.vercel.app/
+
+# Sitemaps
 Sitemap: https://harb-coded.vercel.app/sitemap.xml
