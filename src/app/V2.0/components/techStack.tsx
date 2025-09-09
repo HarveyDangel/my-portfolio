@@ -17,6 +17,7 @@ import {
 } from "react-icons/si";
 
 import { TechItem } from "../../components/types/techStack";
+import { motion } from "framer-motion";
 
 const TechStack = () => {
 	const techStack: TechItem[] = [
@@ -134,9 +135,17 @@ const TechStack = () => {
 				<h3 className="text-gray-900 text-[32px] font-bold p-[12px] text-center">
 					My Tech Stack
 				</h3>
+
 				<div className="space-y-12">
 					{Object.entries(groupedTech).map(([category, items]) => (
-						<div key={category} className="flex flex-col gap-[24px]">
+						<motion.div
+							key={category}
+							className="flex flex-col gap-[24px]"
+							initial={{ opacity: 0, scale: 0.8 }}
+							whileInView={{ opacity: 1, scale: 1 }}
+							transition={{ duration: 0.8 }}
+							viewport={{ once: false }} // will animate every time it enters view
+						>
 							<div className=" flex flex-col justify-center">
 								<h3 className="text-[24px] font-semibold text-center">
 									{formatCategory(category)}
@@ -149,7 +158,7 @@ const TechStack = () => {
 									))}
 								</div>
 							</div>
-						</div>
+						</motion.div>
 					))}
 				</div>
 			</div>

@@ -6,6 +6,7 @@ import { Inter } from "next/font/google";
 import { ThemeProvider } from './context/ThemeContext'
 import { ProjectProvider } from './context/ProjectContext'
 
+import BackToTop from "./components/backtotop";
 
 const inter = Inter({
 	variable: "--font-inter",
@@ -31,6 +32,7 @@ export default function RootLayout({
           <ProjectProvider>
             {/* <Header/> */}
             {children}
+				<BackToTop />
           </ProjectProvider>
         </ThemeProvider>
       </body>
