@@ -5,8 +5,8 @@ import { motion } from "framer-motion";
 export default function Hero() {
 	return (
 		<>
-			<div className="max-w-6xl mx-auto">
-				<div className="w-full pt-5 flex flex-col-reverse md:flex-row lg:gap-[90px]">
+			<div className="max-w-6xl  mx-auto">
+				<div className="w-full pt-5 flex flex-col-reverse md:flex-row lg:gap-[90px] h-full">
 					{/* IMAGE */}
 					<motion.div
 						initial={{ opacity: 0, y: 20 }}
@@ -37,7 +37,7 @@ export default function Hero() {
 								Harvey Dangel,
 							</h2>
 							<h2 className="mt-4 text-[14px] lg:text-[24px]">
-								aspiring Web developer
+								Software Engineer
 							</h2>
 						</motion.div>
 						<motion.div
