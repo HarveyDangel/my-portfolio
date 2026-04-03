@@ -11,7 +11,6 @@ export default function Portfolio() {
 		<>
 			<div
 				className="py-[36px] px-[12px] flex flex-col gap-[24px] bg-white lg:py-[54px]"
-				id="project"
 			>
 				<div className="max-w-6xl mx-auto">
 					<h3 className="text-[32px] font-bold p-[12px]">Projects</h3>
