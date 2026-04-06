@@ -47,10 +47,10 @@ export default function Portfolio() {
 												</span>
 											))}
 										</div>
-										<p className="text-gray-700 text-[14px] line-clamp-2 md:text-[16px]">
+										<p className="text-gray-700 text-[14px] line-clamp-3 md:text-[16px]">
 											{project.description}
 										</p>
-										<div className="flex space-x-4">
+										<div className="flex space-x-4 bottom-0 mt-auto">
 											{/* {project.liveUrl && (
                                     <a
                                        href={project.liveUrl}
