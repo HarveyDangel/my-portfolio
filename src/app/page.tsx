@@ -44,7 +44,7 @@ export default function Home() {
 					{/* QUICK INTRO */}
 					<div className=" bg-[#1C1C1C]">
 						<div className="flex justify-center max-w-6xl mx-auto px-[12px] py-[24px] gap-[12px]">
-							<p className="text-[128px] font-extrabold text-amber-400 -mt-5 relative">{`"`}</p>
+							<p className="text-[128px] font-extrabold text-amber-400 -mt-5 -mb-20 relative">{`"`}</p>
 							<p className="text-white font-semibold text-[24px] my-5 italic lg:text-[32px] ">
 								{`Building Scalable Solutions, One Line at a Time.`}
 							</p>
@@ -114,7 +114,8 @@ export default function Home() {
 									<h4 className="p-[10px] text-center text-[24px] font-medium">
 										UX/UI Design
 									</h4>
-									<p className="text-[14px] text-justify lg:text-[16px]">{`An effective UI/UX not only captures attention but also conveys a clear message. I focus on delivering designs that are both innovative and streamlined.`}</p>
+									{/* <p className="text-[14px] text-justify lg:text-[16px]">{`An effective UI/UX not only captures attention but also conveys a clear message. I focus on delivering designs that are both innovative and streamlined.`}</p> */}
+									<p className="text-[14px] text-justify lg:text-[16px]">{`Design is more than just aesthetics, it’s about how a product feels and functions. I focus on creating intuitive interfaces that turn complex data into actionable insights through thoughtful interaction and visual clarity.`}</p>
 								</motion.div>
 							</div>
 						</div>
@@ -136,13 +137,13 @@ export default function Home() {
 							<div className="py-[16px] flex gap-[36px] justify-center">
 								<a
 									href="https://www.linkedin.com/in/harvey-dangel-a4b09b355/"
-									className="size-[48px] rounded-[12px] text-gray-800 hover:text-white bg-white p-[10px] shadow-lg transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-amber-500 hover:shadow-amber-400 hover:ring hover:ring-white"
+									className="size-[48px] rounded-[12px] text-gray-800 hover:text-white bg-white p-[10px] shadow-lg transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-amber-500 hover:shadow-amber-400 hover:ring hover:ring-white active:scale-50"
 								>
 									<Linkedin className="size-[28px] text-center" />
 								</a>
 								<a
 									href="https://github.com/HarveyDangel"
-									className="size-[48px] rounded-[12px] text-gray-800 hover:text-white bg-white p-[10px] shadow-lg transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-amber-500 hover:shadow-amber-400 hover:ring hover:ring-white"
+									className="size-[48px] rounded-[12px] text-gray-800 hover:text-white bg-white p-[10px] shadow-lg transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-amber-500 hover:shadow-amber-400 hover:ring hover:ring-white active:scale-50"
 								>
 									<Github className="size-[28px]" />
 								</a>
