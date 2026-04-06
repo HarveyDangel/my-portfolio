@@ -11,7 +11,6 @@ export default function Portfolio() {
 		<>
 			<div
 				className="py-[36px] px-[12px] flex flex-col gap-[24px] bg-white lg:py-[54px]"
-				id="project"
 			>
 				<div className="max-w-6xl mx-auto">
 					<h3 className="text-[32px] font-bold p-[12px]">Projects</h3>
@@ -48,10 +47,10 @@ export default function Portfolio() {
 												</span>
 											))}
 										</div>
-										<p className="text-gray-700 text-[14px] line-clamp-2 md:text-[16px]">
+										<p className="text-gray-700 text-[14px] line-clamp-3 md:text-[16px]">
 											{project.description}
 										</p>
-										<div className="flex space-x-4">
+										<div className="flex space-x-4 bottom-0 mt-auto">
 											{/* {project.liveUrl && (
                                     <a
                                        href={project.liveUrl}
