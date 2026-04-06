@@ -15,8 +15,7 @@ export default function About() {
 					<div className="flex gap-[10px]">
 						<p className="font-bold text-[128px] text-[#e0fa8c] -mt-10">{`"`}</p>
 						<p className="lg:text-[32px] shadow-text">
-							{`A BSCS graduate at BiPSU, specializing in software development
-							using Laravel, HTML, CSS, JavaScript, MySQL, and PHP"`}
+							{`Build softwares that matters"`}
 						</p>
 					</div>
 				</div>
@@ -31,11 +30,12 @@ export default function About() {
 						></div> */}
 						<GlassPane>
 							<p className="text-wrap p-[16px]">
-								{`I'm an aspiring software developer. I specialize in building interactive and efficient software
-								applications using`}{" "}
+								{`I'm a software engineer who specialize in building interactive and efficient software
+								applications using`}
 								<strong className="italic">
 									Laravel, HTML, CSS, JavaScript, MySQL, and PHP
 								</strong>
+								{`I am also familiar with Node.js, Tailwind CSS, React library, and on top of that, Next.js framework.`}
 								{`. I enjoy solving complex problems and continuously learning
 								new technologies to improve my craft.`}
 							</p>
@@ -49,7 +49,7 @@ export default function About() {
 								Biliran Provincial Health Office (PHO), I have contributed to building a
 								system that helps track and analyze nutritional data. Through
 								this project, I have collaborated with teams using version
-								control systems, followed coding standards to maintain clean and
+								control systems like git and github, followed coding standards to maintain clean and
 								organized code, and implemented best practices to enhance both
 								performance and user experience.`}
 							</p>
