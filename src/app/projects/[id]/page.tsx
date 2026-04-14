@@ -22,7 +22,7 @@ export default async function ProjectDetail({
 		<>
 			<div className="min-h-screen w-full max-w-[1280px] py-12 px-4 sm:px-6 lg:px-8 place-self-center">
 				<div className="max-w-4xl mx-auto">
-					<h1 className="text-3xl font-bold mb-6">{project.title}</h1>
+					<h2 className="text-3xl font-bold mb-6">{project.title}</h2>
 					<div className="mb-8">
 						<Image
 							src={project.imageUrl}

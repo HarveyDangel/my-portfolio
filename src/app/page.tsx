@@ -131,9 +131,9 @@ export default function Home() {
 					<div className=" bg-gray-900 scroll-mt-16" id="contact">
 						{/* CONTACT ME */}
 						<div className="py-[36px] px-[12px] flex flex-col gap-[12px] text-white max-w-6xl mx-auto">
-							<h1 className="text-[48px] text-center md:text-[128px]">
+							<h2 className="text-[48px] text-center md:text-[128px]">
 								Contact me
-							</h1>
+							</h2>
 							<div className="py-[16px] flex gap-[36px] justify-center">
 								<a
 									href="https://www.linkedin.com/in/harvey-dangel-a4b09b355/"
