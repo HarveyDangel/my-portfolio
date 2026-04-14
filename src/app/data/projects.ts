@@ -11,7 +11,7 @@ export interface ProjectDetails {
 export const projects: ProjectDetails[] = [
   {
     id: 1,
-    title: "Event Management System",
+    title: "Event Management System of Students Organization of BiPSU",
     description: "A web-based platform designed for Biliran Province State University (BiPSU) to simplify event scheduling, tracking, and feedback collection. It allows students, faculty, and administrators to manage events efficiently with role-based access control.",
     technologies: ["Laravel", "Tailwind CSS", "Blade", "MySQL"],
     imageUrl: "/images/EventMS.png",
@@ -29,7 +29,7 @@ export const projects: ProjectDetails[] = [
   },
   {
     id: 3,
-    title: "Wordpress Personal Portfolio",
+    title: "Wordpress Personal Portfolio Website as a Web Developer",
     description: "This project is a Personal Web Portfolio designed and developed using WordPress with WordPress Local as the development environment. The portfolio serves as an online presence to showcase my skills, projects, and experiences in web development.",
     technologies: ["Wordpress", "Local WP"],
     imageUrl: "/images/WP.png",
