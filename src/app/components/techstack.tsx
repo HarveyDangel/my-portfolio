@@ -14,6 +14,8 @@ import {
 	SiMysql,
 	SiCanva,
 	SiPhp,
+	SiNodedotjs,
+	SiNpm,
 } from "react-icons/si";
 
 import { TechItem } from "./types/techStack";
@@ -87,7 +89,18 @@ const TechStack = () => {
 			icon: <SiTypescript className="text-blue-600" />,
 			category: "frontend",
 		},
-
+		{
+			id: "nodejs",
+			name: "Node.JS",
+			icon: <SiNodedotjs className="text-green-500" />,
+			category: "backend",
+		},
+		{
+			id: "npm",
+			name: "NPM",
+			icon: <SiNpm className="text-red-500" />,
+			category: "development tool",
+		},
 		{
 			id: "tailwindcss",
 			name: "Tailwind CSS",
