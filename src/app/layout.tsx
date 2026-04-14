@@ -14,8 +14,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-	title: "Harb Coded",
-	description: "Havey Dangel's portfolio",
+	title: "Harb Coded | Harvey Dangel | Full-Stack Developer Portfolio",
+	description: "Explore Harvey Dangel’s portfolio showcasing modern web development projects using React, Next.js, Laravel, and full-stack technologies.",
 	verification: {
 	  google: "VBKAxCSDS72vHDR-AKQm3fuiTZuLVI8V9GyL6KTAZHI"},
 };
