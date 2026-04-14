@@ -5,7 +5,7 @@ export default function ScrollPage() {
   return (
     <div className="space-y-40 p-10">
       <section className="h-screen flex items-center justify-center">
-        <h1 className="text-5xl font-bold">Scroll Down 👇</h1>
+        <h2 className="text-5xl font-bold">Scroll Down 👇</h2>
       </section>
 
       {/* Fade In Section */}

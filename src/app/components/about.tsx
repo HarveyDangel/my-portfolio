@@ -9,9 +9,9 @@ export default function About() {
 			>
 				{/* Container */}
 				<div className="lg:flex lg:flex-col lg:w-1/2 justify-center lg:justify-start">
-					<h1 className="lg:flex items-center text-[36px] lg:text-[40px] lg:text-left font-bold text-[#F7F9FC] mb-[20px]">
+					<h2 className="lg:flex items-center text-[36px] lg:text-[40px] lg:text-left font-bold text-[#F7F9FC] mb-[20px]">
 						About me
-					</h1>
+					</h2>
 					<div className="flex gap-[10px]">
 						<p className="font-bold text-[128px] text-[#e0fa8c] -mt-10">{`"`}</p>
 						<p className="lg:text-[32px] shadow-text">

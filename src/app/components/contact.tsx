@@ -11,9 +11,9 @@ export default function Contact() {
 				<div className="w-full max-w-[1200px] mx-auto flex flex-col px-[20px] py-[50px] lg:p-[20px]">
 					{/* title */}
 					<div className="mb-[20px] flex justify-center">
-						<h1 className="flex items-center text-[36px] lg:text-[40px] font-bold">
+						<h2 className="flex items-center text-[36px] lg:text-[40px] font-bold">
 							Contact Me
-						</h1>
+						</h2>
 					</div>
 					{/* main contact details */}
 					<div className="flex flex-col lg:flex-row gap-[20px] lg:justify-between py-[20px] font-normal">

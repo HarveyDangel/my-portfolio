@@ -13,7 +13,7 @@ export default function Home() {
 					key={`sub-${i}-${j}`}
 					className="w-full flex items-center p-2"
 				>
-					<h1 className="text-xl font-semibold">#</h1>
+					<h2 className="text-xl font-semibold">#</h2>
 				</Glasspane>
 			);
 		}
@@ -22,7 +22,7 @@ export default function Home() {
 				key={`group-${i}`}
 				className="w-full grid grid-cols-10 p-2 gap-2"
 			>
-				<h1 className="text-2xl font-bold col-span-1">{i}</h1>
+				<h2 className="text-2xl font-bold col-span-1">{i}</h2>
 				<div className="grid grid-cols-8 gap-1 col-span-9">{subItems}</div>
 			</Glasspane>
 		);
