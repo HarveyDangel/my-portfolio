@@ -37,7 +37,7 @@ This is my personal portfolio website — designed to be minimal, load fast, and
 
 ---
 
-## Folder Structure
+<!--## Folder Structure
 
 ```
 portfolio/
@@ -67,7 +67,7 @@ portfolio/
 ```
 
 ---
-
+-->
 ## Deployment
 
 This portfolio is deployed on **Vercel** with automatic deployments on every push to `main`.
