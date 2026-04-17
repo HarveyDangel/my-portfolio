@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import GlassPane from "./glasspane";
+import GlassPane from "./ui/glasspane";
 import { projects} from "../data/projects";
 // import { useTheme } from "../context/ThemeContext";
 

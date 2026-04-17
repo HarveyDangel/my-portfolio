@@ -1,5 +1,5 @@
 import { JSX } from "react";
-import Glasspane from "@/app/components/glasspane";
+import Glasspane from "@/app/components/ui/glasspane";
 
 export default function Home() {
 	const items: JSX.Element[] = [];
