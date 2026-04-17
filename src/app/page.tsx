@@ -7,39 +7,14 @@ import { motion } from "framer-motion";
 import Portfolio from "./components/projects";
 import TechStack from "./components/techstack";
 import Hero from "./components/hero";
+import { Navbar } from "./components/ui/navbar";
 
 export default function Home() {
 	return (
 		<>
 			<div className="flex flex-col w-full text-gray-900 bg-gray-100 place-self-center max-w-8xl">
 				<div className="h-full w-full mx-auto">
-					<nav className="hidden md:flex justify-between items-center bg-gray-100 p-4 sticky top-0 z-50 max-w-8xl">
-						<div className="w-full max-w-6xl mx-auto grid grid-cols-3 gap-[40px]  items-center">
-							<h1 className="font-bold text-xl">
-								Harb <br /> Coded
-							</h1>
-							<div className="flex gap-[24px] justify-center text-gray-900 text-[16px]">
-								<a
-									href="#about"
-									className="hover:border-b-2 ease-in-out hover:duration-100 hover:shadow-xl"
-								>
-									About me
-								</a>
-								<a
-									href="#project"
-									className="hover:border-b-2 ease-in-out hover:duration-100 hover:shadow-xl"
-								>
-									Projects
-								</a>
-								<a
-									href="#contact"
-									className="hover:border-b-2 ease-in-out hover:duration-100 hover:shadow-xl"
-								>
-									Contact me
-								</a>
-							</div>
-						</div>
-					</nav>
+					<Navbar />
 					<Hero />
 					{/* QUICK INTRO */}
 					<div className=" bg-[#1C1C1C]">
