@@ -1,4 +1,4 @@
-import GlassPane from "./glasspane";
+import GlassPane from "./ui/glasspane";
 
 export default function About() {
 	return (

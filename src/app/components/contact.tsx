@@ -41,14 +41,8 @@ export default function Contact() {
 					</div>
 
 					<div className="flex flex-col-reverse items-center lg:flex-row lg:items-end gap-[20px] lg:justify-between pt-[70px] font-thin text-[24]">
-						<p>© 2025 All rights reserved.</p>
+						<p>© 2026 All rights reserved.</p>
 						<div className="flex gap-[40px]">
-							{/* <a
-							href="https://www.facebook.com/profile.php?id=100007451268533"
-							className="size-[68px] rounded-full bg-[#545F7F] p-[10px] shadow-lg transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500"
-						>
-							<Facebook className="size-[48px] text-[#F7F9FC]" />
-						</a> */}
 							<a
 								href="https://www.linkedin.com/in/harvey-dangel-a4b09b355/"
 								className="size-[68px] rounded-full bg-[#545F7F] p-[10px] shadow-lg transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500"

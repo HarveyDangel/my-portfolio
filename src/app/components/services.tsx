@@ -1,4 +1,4 @@
-import GlassPane from "./glasspane";
+import GlassPane from "./ui/glasspane";
 import TechStack from "./techstack";
 
 export default function Services() {
