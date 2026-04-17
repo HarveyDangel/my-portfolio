@@ -16,10 +16,28 @@ import {
 	SiPhp,
 	SiNodedotjs,
 	SiNpm,
+	SiComposer,
+	SiGooglegemini,
+	SiClaude,
+	SiGooglesearchconsole,
+	SiOpenai,
 } from "react-icons/si";
 
 import { TechItem } from "./types/techStack";
 import { motion } from "framer-motion";
+
+const GradientProvider = () => (
+	<svg width="0" height="0" className="absolute">
+		<defs>
+			<radialGradient id="gemini-sparkle" x1="0%" y1="0%" x2="100%" y2="100%">
+				<stop offset="0%" stopColor="#ef4444" /> {/* Red (Top) */}
+				<stop offset="33%" stopColor="#facc15" /> {/* Yellow (Left) */}
+				<stop offset="66%" stopColor="#22c55e" /> {/* Green (Bottom) */}
+				<stop offset="100%" stopColor="#3b82f6" /> {/* Blue (Right) */}
+			</radialGradient>
+		</defs>
+	</svg>
+);
 
 const TechStack = () => {
 	const techStack: TechItem[] = [
@@ -114,6 +132,12 @@ const TechStack = () => {
 			category: "backend",
 		},
 		{
+			id: "composer",
+			name: "Composer",
+			icon: <SiComposer className="text-purple-500" />,
+			category: "development tool",
+		},
+		{
 			id: "figma",
 			name: "Figma",
 			icon: <SiFigma className="text-pink-500" />,
@@ -124,6 +148,59 @@ const TechStack = () => {
 			name: "Canva",
 			icon: <SiCanva className="text-blue-500" />,
 			category: "development tool",
+		},
+		{
+			id: "googlegemini",
+			name: "Google Gemini",
+			icon: (
+				<div className="relative inline-flex items-center justify-center">
+					{/* The Icon acts as a mask */}
+					<SiGooglegemini/>
+					{/* The Gradient Overlay */}
+					<div
+						className="absolute inset-0 opacity-90"
+						style={{
+							background:
+								"conic-gradient(from 0deg, #ef4444, #3b82f6, #22c55e, #facc15, #ef4444)",
+							mixBlendMode: "screen", // This blends the gradient into the icon shape
+						}}
+					/>
+				</div>
+			),
+			category: "ai tool",
+		},
+		{
+			id: "googlesearchconsole",
+			name: "Google Search Console",
+			icon: (
+				<div className="relative inline-flex items-center justify-center">
+					{/* The Icon acts as a mask */}
+					<SiGooglesearchconsole/>
+
+					{/* The Gradient Overlay */}
+					<div
+						className="absolute inset-0 opacity-100"
+						style={{
+							background:
+								"conic-gradient(from 0deg, #ef4444, #3b82f6, #22c55e, #facc15, #ef4444)",
+							mixBlendMode: "screen", // This blends the gradient into the icon shape
+						}}
+					/>
+				</div>
+			),
+			category: "development tool",
+		},
+		{
+			id: "claude",
+			name: "Claude",
+			icon: <SiClaude className="text-amber-600" />,
+			category: "ai tool",
+		},
+		{
+			id: "openai",
+			name: "ChatGPT",
+			icon: <SiOpenai className="text-gray-800" />,
+			category: "ai tool",
 		},
 	];
 
@@ -149,6 +226,7 @@ const TechStack = () => {
 					My Tech Stack
 				</h3>
 
+				<GradientProvider />
 				<div className="space-y-12">
 					{Object.entries(groupedTech).map(([category, items]) => (
 						<motion.div
