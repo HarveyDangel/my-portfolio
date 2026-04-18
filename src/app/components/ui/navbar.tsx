@@ -85,7 +85,7 @@ export function Navbar() {
             isProjectPage={isProjectPage} 
          />
 
-         <nav className="flex justify-between items-center backdrop-blur-md px-4 py-6 sticky top-0 z-50 max-w-8xl">
+         <nav className="flex justify-between items-center bg-gray-100/60 backdrop-blur-md px-4 py-6 sticky top-0 z-50 max-w-8xl">
             <div className="w-full max-w-6xl mx-auto grid grid-cols-5 items-center">
                <h1 className="col-span-4 text-[16px] font-bold md:text-2xl md:col-span-1">
                   <Link href="/">

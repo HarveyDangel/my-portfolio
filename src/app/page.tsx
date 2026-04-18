@@ -11,7 +11,7 @@ import Hero from "./components/hero";
 export default function Home() {
 	return (
 		<>
-			<div className="flex flex-col w-full text-gray-900 bg-gray-100 place-self-center max-w-8xl">
+			<div className="flex flex-col w-full text-gray-900 bg-gray-100/60 place-self-center max-w-8xl">
 				<div className="h-full w-full mx-auto">
 					<Hero />
 					{/* QUICK INTRO */}

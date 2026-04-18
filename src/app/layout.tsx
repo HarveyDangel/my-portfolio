@@ -9,8 +9,9 @@ import { ProjectProvider } from './context/ProjectContext'
 import BackToTop from "./components/backtotop";
 
 const inter = Inter({
-	variable: "--font-inter",
-	subsets: ["latin"],
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-inter', // This allows us to use it in Tailwind
 });
 
 export const metadata: Metadata = {
@@ -26,14 +27,14 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang="en" className="scroll-smooth">
-			<body className={`${inter} antialiased`}>
+		<html lang="en" className={`${inter.variable} scroll-smooth`}>
+			<body className="antialiased bg-gray-100/60">
         <ThemeProvider>
           <ProjectProvider>
-				<Navbar/>
+			<Navbar />
             {/* <Header/> */}
             {children}
-				<BackToTop />
+			<BackToTop />
           </ProjectProvider>
         </ThemeProvider>
       </body>
