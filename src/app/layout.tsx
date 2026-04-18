@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Inter } from "next/font/google";
 
-// import Header from "./components/header";
+import { Navbar } from "./components/ui/navbar";
 import { ThemeProvider } from './context/ThemeContext'
 import { ProjectProvider } from './context/ProjectContext'
 
@@ -30,6 +30,7 @@ export default function RootLayout({
 			<body className={`${inter} antialiased`}>
         <ThemeProvider>
           <ProjectProvider>
+				<Navbar/>
             {/* <Header/> */}
             {children}
 				<BackToTop />

@@ -7,14 +7,12 @@ import { motion } from "framer-motion";
 import Portfolio from "./components/projects";
 import TechStack from "./components/techstack";
 import Hero from "./components/hero";
-import { Navbar } from "./components/ui/navbar";
 
 export default function Home() {
 	return (
 		<>
 			<div className="flex flex-col w-full text-gray-900 bg-gray-100 place-self-center max-w-8xl">
 				<div className="h-full w-full mx-auto">
-					<Navbar />
 					<Hero />
 					{/* QUICK INTRO */}
 					<div className=" bg-[#1C1C1C]">

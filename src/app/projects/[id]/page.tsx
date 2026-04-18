@@ -44,7 +44,7 @@ export default async function ProjectDetail({
 							{project.technologies.map((tech, index) => (
 								<span
 									key={index}
-									className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-100 rounded"
+									className="px-3 py-1 bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 rounded"
 								>
 									{tech}
 								</span>
@@ -67,7 +67,7 @@ export default async function ProjectDetail({
 									href={project.githubUrl}
 									target="_blank"
 									rel="noopener noreferrer"
-									className="btn btn-secondary"
+									className="text-blue-600 hover:underline"
 								>
 									View on GitHub
 								</a>
