@@ -29,12 +29,17 @@ import { motion } from "framer-motion";
 const GradientProvider = () => (
 	<svg width="0" height="0" className="absolute">
 		<defs>
-			<radialGradient id="gemini-sparkle" x1="0%" y1="0%" x2="100%" y2="100%">
+			<linearGradient id="gemini-sparkle" x1="0%" y1="0%" x2="100%" y2="100%">
+				<stop offset="20%" stopColor="#ef4444" /> {/* Red (Top) */}
+				<stop offset="60%" stopColor="#3b82f6" /> {/* Blue (Right) */}
+			</linearGradient>
+
+			<linearGradient id="searchconsole-sparkle" x1="0%" y1="0%" x2="100%" y2="100%">
 				<stop offset="0%" stopColor="#ef4444" /> {/* Red (Top) */}
 				<stop offset="33%" stopColor="#facc15" /> {/* Yellow (Left) */}
 				<stop offset="66%" stopColor="#22c55e" /> {/* Green (Bottom) */}
 				<stop offset="100%" stopColor="#3b82f6" /> {/* Blue (Right) */}
-			</radialGradient>
+			</linearGradient>
 		</defs>
 	</svg>
 );
@@ -152,42 +157,13 @@ const TechStack = () => {
 		{
 			id: "googlegemini",
 			name: "Google Gemini",
-			icon: (
-				<div className="relative inline-flex items-center justify-center">
-					{/* The Icon acts as a mask */}
-					<SiGooglegemini/>
-					{/* The Gradient Overlay */}
-					<div
-						className="absolute inset-0 opacity-90"
-						style={{
-							background:
-								"conic-gradient(from 0deg, #ef4444, #3b82f6, #22c55e, #facc15, #ef4444)",
-							mixBlendMode: "screen", // This blends the gradient into the icon shape
-						}}
-					/>
-				</div>
-			),
+			icon: ( <SiGooglegemini style={{ fill: "url(#gemini-sparkle)"}}/> ),
 			category: "ai tool",
 		},
 		{
 			id: "googlesearchconsole",
 			name: "Google Search Console",
-			icon: (
-				<div className="relative inline-flex items-center justify-center">
-					{/* The Icon acts as a mask */}
-					<SiGooglesearchconsole/>
-
-					{/* The Gradient Overlay */}
-					<div
-						className="absolute inset-0 opacity-100"
-						style={{
-							background:
-								"conic-gradient(from 0deg, #ef4444, #3b82f6, #22c55e, #facc15, #ef4444)",
-							mixBlendMode: "screen", // This blends the gradient into the icon shape
-						}}
-					/>
-				</div>
-			),
+			icon: ( <SiGooglesearchconsole style={{ fill: "url(#searchconsole-sparkle)" }} />),
 			category: "development tool",
 		},
 		{
