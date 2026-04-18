@@ -16,10 +16,33 @@ import {
 	SiPhp,
 	SiNodedotjs,
 	SiNpm,
+	SiComposer,
+	SiGooglegemini,
+	SiClaude,
+	SiGooglesearchconsole,
+	SiOpenai,
 } from "react-icons/si";
 
 import { TechItem } from "./types/techStack";
 import { motion } from "framer-motion";
+
+const GradientProvider = () => (
+	<svg width="0" height="0" className="absolute">
+		<defs>
+			<linearGradient id="gemini-sparkle" x1="0%" y1="0%" x2="100%" y2="100%">
+				<stop offset="20%" stopColor="#ef4444" /> {/* Red (Top) */}
+				<stop offset="60%" stopColor="#3b82f6" /> {/* Blue (Right) */}
+			</linearGradient>
+
+			<linearGradient id="searchconsole-sparkle" x1="0%" y1="0%" x2="100%" y2="100%">
+				<stop offset="0%" stopColor="#ef4444" /> {/* Red (Top) */}
+				<stop offset="33%" stopColor="#facc15" /> {/* Yellow (Left) */}
+				<stop offset="66%" stopColor="#22c55e" /> {/* Green (Bottom) */}
+				<stop offset="100%" stopColor="#3b82f6" /> {/* Blue (Right) */}
+			</linearGradient>
+		</defs>
+	</svg>
+);
 
 const TechStack = () => {
 	const techStack: TechItem[] = [
@@ -114,6 +137,12 @@ const TechStack = () => {
 			category: "backend",
 		},
 		{
+			id: "composer",
+			name: "Composer",
+			icon: <SiComposer className="text-purple-500" />,
+			category: "development tool",
+		},
+		{
 			id: "figma",
 			name: "Figma",
 			icon: <SiFigma className="text-pink-500" />,
@@ -124,6 +153,30 @@ const TechStack = () => {
 			name: "Canva",
 			icon: <SiCanva className="text-blue-500" />,
 			category: "development tool",
+		},
+		{
+			id: "googlegemini",
+			name: "Google Gemini",
+			icon: ( <SiGooglegemini style={{ fill: "url(#gemini-sparkle)"}}/> ),
+			category: "ai tool",
+		},
+		{
+			id: "googlesearchconsole",
+			name: "Google Search Console",
+			icon: ( <SiGooglesearchconsole style={{ fill: "url(#searchconsole-sparkle)" }} />),
+			category: "development tool",
+		},
+		{
+			id: "claude",
+			name: "Claude",
+			icon: <SiClaude className="text-amber-600" />,
+			category: "ai tool",
+		},
+		{
+			id: "openai",
+			name: "ChatGPT",
+			icon: <SiOpenai className="text-gray-800" />,
+			category: "ai tool",
 		},
 	];
 
@@ -149,6 +202,7 @@ const TechStack = () => {
 					My Tech Stack
 				</h3>
 
+				<GradientProvider />
 				<div className="space-y-12">
 					{Object.entries(groupedTech).map(([category, items]) => (
 						<motion.div
