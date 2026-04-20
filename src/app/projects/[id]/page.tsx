@@ -25,19 +25,21 @@ export default async function ProjectDetail({
 	return (
 		<>
 			<div className="min-h-screen w-full max-w-8xl py-12 px-4 sm:px-6 lg:px-8 place-self-center">
-				<div className="max-w-6xl mx-auto">
-					{/* Project Title */}
-					<h2 className="text-3xl font-bold mb-6">{project.title}</h2>
-					{/* Project Preview Image */}
-					<div className="mb-8">
-						<Image
-							src={project.imageUrl}
-							alt={project.title}
-							width={800}
-							height={600}
-							className="w-full rounded-lg"
-							priority
-						/>
+				<div className="max-w-6xl mx-auto gap-8 flex flex-col">
+					<div>
+						{/* Project Title */}
+						<h2 className="text-3xl font-bold mb-6">{project.title}</h2>
+						{/* Project Preview Image */}
+						<div className="">
+							<Image
+								src={project.imageUrl}
+								alt={project.title}
+								width={800}
+								height={600}
+								className="w-full rounded-lg"
+								priority
+							/>
+						</div>
 					</div>
 					{/* Project Description and Details */}
 					<div
@@ -63,10 +65,10 @@ export default async function ProjectDetail({
 
 					{/* Technologies Used */}
 					<div className="scroll-mt-25" id="technology">
-						<h2 className="text-2xl font-semibold mb-4 mt-8">
+						<h2 className="text-2xl font-semibold mb-4">
 							Technologies Used
 						</h2>
-						<div className="flex flex-wrap gap-2 mb-8">
+						<div className="flex flex-wrap gap-2">
 							{project.technologies.map((tech, index) => (
 								<span
 									key={index}
@@ -87,7 +89,7 @@ export default async function ProjectDetail({
 						</Card>
 					</div>
 
-					<div className="flex space-x-4 mt-8">
+					<div className="flex space-x-4">
 						{project.liveUrl && (
 							<a
 								href={project.liveUrl}
