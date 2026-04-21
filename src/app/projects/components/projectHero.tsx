@@ -9,7 +9,7 @@ interface ProjectHeroProps {
   project: {
     title: string;
 	 description: string;
-    githubUrl: string;
+    githubUrl?: string;
     imageUrl: string;
   };
 }
