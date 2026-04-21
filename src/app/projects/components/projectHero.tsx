@@ -1,7 +1,7 @@
 'use client';
 
 import Image from "next/image";
-import { Github, Linkedin } from "lucide-react";
+import { Github } from "lucide-react";
 import { motion } from "framer-motion";
 import  React  from "react";
 

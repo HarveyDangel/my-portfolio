@@ -4,7 +4,6 @@ import {
 	Lightbulb,
 	ShieldAlert,
 	Database,
-	Map,
 	Layout,
 } from "lucide-react";
 

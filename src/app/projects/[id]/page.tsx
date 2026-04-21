@@ -2,7 +2,6 @@
 
 import { projects } from "@/app/data/projects";
 import { notFound } from "next/navigation";
-import Image from "next/image";
 
 import Card from "@/app/components/ui/card";
 import ProjectHero from "../components/projectHero";
