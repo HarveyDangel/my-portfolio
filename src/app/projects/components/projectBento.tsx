@@ -100,16 +100,19 @@ export default function ProjectBento({
 			</div>
 
 			{/* 5. Challenges Card (Iterates through your challenges array) */}
-				<h3 className="text-2xl font-bold text-slate-900 mb-2">The Challenge</h3>
+			<div className="flex md:col-span-3 md:row-span-2 rounded-3xl bg-white border border-slate-200 p-8 shadow-sm gap-4">
+				<h3 className="text-2xl font-bold text-slate-900 mb-2">
+					The Challenge
+				</h3>
 				{theChallenges.map((challenge: Challenge, index) => (
 					<div
 						key={index}
-						className={`md:col-span-1 md:row-span-2 rounded-3xl p-8 border flex flex-col shadow-sm transition-all
-            ${
-							index % 2 === 0
-								? "bg-amber-50 border-amber-100"
-								: "bg-indigo-50 border-indigo-100"
-						}`}
+						className={`md:col-span-1 md:row-span-2 rounded-2xl p-8 border flex flex-col shadow-sm transition-all
+							${
+								index % 2 === 0
+									? "bg-amber-50 border-amber-100"
+									: "bg-indigo-50 border-indigo-100"
+							}`}
 					>
 						<div
 							className={`w-10 h-10 rounded-full flex items-center justify-center mb-4 
@@ -129,6 +132,7 @@ export default function ProjectBento({
 						</p>
 					</div>
 				))}
+			</div>
 		</div>
 	);
 }

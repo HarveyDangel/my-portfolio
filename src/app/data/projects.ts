@@ -81,7 +81,7 @@ export const projects: ProjectDetails[] = [
 			{
 				title: "Defining Administrative Hierarchy",
 				description:
-					"One of the primary challenges was translating university policy into code—specifically, determining which administrative branch held the authority to finalize bookings. I had to design a permission-based workflow that could handle competing requests based on organizational priority.",
+					"One of the primary challenges was translating university policy into code. Specifically, determining which administrative branch held the authority to finalize bookings. I had to design a permission-based workflow that could handle competing requests based on organizational priority.",
 			},
 			{
 				title: "Handling Priority Conflicts",

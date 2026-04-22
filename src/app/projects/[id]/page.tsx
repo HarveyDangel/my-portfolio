@@ -27,7 +27,7 @@ export default async function ProjectDetail({
 		<>
 			<div className="min-h-screen w-full max-w-8xl place-self-center">
 				<div className=" mx-auto gap-8 flex flex-col">
-					<div className=" max-w-6xl mx-auto mb-5 md:mb-27">
+					<div className=" max-w-6xl mx-auto mb-5 md:mb-20">
 						<ProjectHero project={project} />
 					</div>
 					<div className="bg-gray-900 text-white font-light text-[12px] md:text-[14px]">
