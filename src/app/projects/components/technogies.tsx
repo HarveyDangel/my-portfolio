@@ -6,7 +6,7 @@ interface TechnologiesProps {
 
 export default function Technologies( {techIds}: TechnologiesProps ) {
 	return (
-		<div className="flex flex-wrap gap-4 justify-between">
+		<div className="flex flex-wrap gap-4 justify-between scroll-mt-35" id="technology">
 			{techIds.map((technologies) => (
 				<div
 					key={technologies}

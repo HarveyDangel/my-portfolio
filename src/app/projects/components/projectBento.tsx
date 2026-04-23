@@ -51,7 +51,7 @@ export default function ProjectBento({
 	metrics,
 }: ProjectBentoProps) {
 	return (
-		<div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+		<div className="grid grid-cols-1 md:grid-cols-3 gap-4 scroll-mt-25" id="description">
 			{/* 1. Problem Card - Large (Span 2 Columns) */}
 			<div className="md:col-span-2 md:row-span-1 rounded-3xl bg-white border border-slate-200 p-8 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow">
 				<div>

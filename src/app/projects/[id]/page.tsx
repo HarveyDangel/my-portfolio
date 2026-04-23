@@ -34,19 +34,6 @@ export default async function ProjectDetail({
 							<p>Role: {project.role}</p>
 							<p>Platform: {project.platform}</p>
 							<p>Timeline: {project.timeline}</p>
-							{/* <div className="flex gap-1">
-								<h2>Technologies Used:</h2>
-								<div className="flex flex-wrap gap-2">
-									{project.technologies.map((tech, index) => (
-										<span
-											key={index}
-											className="bg-gray-100 text-gray-900 rounded px-1 font-semibold text-[10px] md:text-[12px]"
-										>
-											{tech}
-										</span>
-									))}
-								</div>
-							</div> */}
 						</div>
 					</div>
 					{/*Bento section */}
@@ -60,7 +47,7 @@ export default async function ProjectDetail({
 							technologies={project.technologies}
 						/>
 						{/* Project Gallery */}
-						<div className="scroll-mt-25" id="gallery">
+						<div className="scroll-mt-25 mt-5" id="gallery">
 							<h3 className="text-2xl font-semibold mb-4">Gallery</h3>
 							{/* Project Images */}
 							<Card className="p-4 h-200">
