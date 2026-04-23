@@ -6,10 +6,32 @@ export interface ProjectDetails {
 	timeline: string;
 	platform: string;
 	technologies: string[];
-	schemaComplexity: string[];
-	buildArchitecture: string[];
-	securityAudit: string[];
-	responsiveness: string[];
+	technicalMetrics: {
+		schema: {
+			title: string;
+			metric: string;
+			details: string;
+		};
+		architecture: {
+			title: string;
+			metric: string;
+			details: string;
+		};
+		security: {
+			title: string;
+			metric: string;
+			details: string;
+		};
+		responsiveness: {
+			title: string;
+			metric: string;
+			details: string;
+		};
+	};
+	// schemaComplexity: string[];
+	// buildArchitecture: string[];
+	// securityAudit: string[];
+	// responsiveness: string[];
 	theProblem: string;
 	theSolution: string;
 	features: {
@@ -35,23 +57,32 @@ export const projects: ProjectDetails[] = [
 		timeline: "7 weeks",
 		platform: "Web",
 		technologies: ["Laravel", "Tailwind CSS", "Blade", "MySQL"],
-		schemaComplexity: [
-			"+12 Relational Tables",
-			"Normalized MySQL structure with optimized indexing for relational queries.",
-		],
-		buildArchitecture: [
-			"Monolithic Design",
-			"80% Backend Logic",
-			"Modular PHP classes following MVC pattern for high maintainability.",
-		],
-		securityAudit: [
-			"4 Layer Protection",
-			"Implement CSRF tokens, SQL Injection prevention, password hashing.",
-		],
-		responsiveness: [
-			"3 Breakpoints",
-			"Fully fluid layout optimized for Mobile, Tablet, and Desktop views",
-		],
+		technicalMetrics: {
+			schema: {
+				title: "Schema Complexity",
+				metric: "+12 Relational Tables",
+				details:
+					"Normalized MySQL structure with optimized indexing for relational queries.",
+			},
+			architecture: {
+				title: "Build Architecture",
+				metric: "Monolithic Design",
+				details:
+					"80% Backend Logic, Modular PHP classes following MVC pattern for high maintainability.",
+			},
+			security: {
+				title: "Security Audit",
+				metric: "4 Layer Protection",
+				details:
+					"Implement CSRF tokens, SQL Injection prevention, and bcrypt password hashing.",
+			},
+			responsiveness: {
+				title: "Responsiveness",
+				metric: "3 Breakpoints",
+				details:
+					"Fully fluid layout optimized for Mobile, Tablet, and Desktop views.",
+			},
+		},
 		theProblem:
 			"Student organizations at Biliran Province State University frequently encountered scheduling conflicts when booking campus venues. Without a centralized system, venues were often double-booked for the same time slot, or overlapping durations led to logistical chaos. These bottlenecks created significant administrative strain and unnecessary stress for student organizers, often forcing last-minute event cancellations or venue changes.",
 		theSolution:
@@ -103,23 +134,32 @@ export const projects: ProjectDetails[] = [
 		timeline: "16 weeks",
 		platform: "Web",
 		technologies: ["HTML", "BootStrap CSS", "JavaScript", "PHP", "MySQL"],
-		schemaComplexity: [
-			"+10 Relational Tables",
-			"Normalized MySQL structure with optimized indexing for relational queries.",
-		],
-		buildArchitecture: [
-			"Monolithic Design",
-			"90% Backend Logic",
-			"Modular PHP classes.",
-		],
-		securityAudit: [
-			"3 Layer Protection",
-			"SQL Injection prevention, password hashing.",
-		],
-		responsiveness: [
-			"Office use interface design",
-			"The UX/UI design is focused in Desktop view",
-		],
+		technicalMetrics: {
+			schema: {
+				title: "Schema Complexity",
+				metric: "+10 Relational Tables",
+				details:
+					"Normalized MySQL structure with optimized indexing for relational queries.",
+			},
+			architecture: {
+				title: "Build Architecture",
+				metric: "Monolithic Design",
+				details:
+					"90% Backend Logic, Modular PHP classes for high maintainability.",
+			},
+			security: {
+				title: "Security Audit",
+				metric: "4 Layer Protection",
+				details:
+					"Implement SQL Injection prevention, and bcrypt password hashing.",
+			},
+			responsiveness: {
+				title: "Responsiveness",
+				metric: "No Breakpoints",
+				details:
+					"The UX/UI design is focused in Desktop view",
+			},
+		},
 		theProblem:
 			"The Provincial Health Office (PHO) of Biliran struggled with a fragmented and time-consuming reporting process for child malnutrition. Staff were forced to manually audit local files to identify which municipalities had failed to submit consolidated data or which barangays had missing records. This lack of centralized visibility delayed critical health interventions and increased the risk of data inaccuracies.",
 		theSolution:

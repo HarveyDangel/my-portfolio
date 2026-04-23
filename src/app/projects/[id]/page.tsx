@@ -1,5 +1,4 @@
-"use server";
-
+'use server';
 import { projects } from "@/app/data/projects";
 import { notFound } from "next/navigation";
 
@@ -57,6 +56,7 @@ export default async function ProjectDetail({
 							theSolution={project.theSolution}
 							theChallenges={project.theChallenges} // This is an array of {title, description}
 							features={project.features}
+							metrics={project.technicalMetrics}
 						/>
 						{/* Project Gallery */}
 						<div className="scroll-mt-25" id="gallery">
