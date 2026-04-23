@@ -43,10 +43,10 @@ export default function ProjectHero({project}: ProjectHeroProps) {
 							transition={{ duration: 1 }}
 						>
 							
-							<h2 className="text-xl font-bold lg:text-[32px] mb-2">
+							<h2 className="text-xl font-bold lg:text-[36px] mb-3">
 								{project.title}
 							</h2>
-							<p className="text-[14px] font-normal">{project.description}</p>
+							<p className="text-[16px] font-normal leading-relaxed">{project.description}</p>
 							
 						</motion.div>
 						<motion.div

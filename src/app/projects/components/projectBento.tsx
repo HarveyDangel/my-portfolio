@@ -1,39 +1,59 @@
 import React from "react";
 import {
 	AlertCircle,
-	Lightbulb,
 	ShieldAlert,
-	Database,
 	Layout,
 } from "lucide-react";
 
+import TechMetrics from "./technicalMetric";
+import Technologies from "./technogies";
+
+interface MetricItem {
+	title: string;
+	metric: string;
+	details: string;
+}
+
+interface TechMetricsProps {
+	metrics: {
+		schema: MetricItem;
+		architecture: MetricItem;
+		security: MetricItem;
+		responsiveness: MetricItem;
+	};
+}
+
 interface Feature {
-   title: string;
-   detail: string;
+	title: string;
+	detail: string;
 }
 
 interface Challenge {
-   title: string;
-   description: string;
+	title: string;
+	description: string;
 }
 
 interface ProjectBentoProps {
+	technologies: string[];
 	theProblem: string;
 	theSolution: string;
 	features: Feature[];
 	theChallenges: Challenge[];
+	metrics: TechMetricsProps["metrics"];
 }
 
 export default function ProjectBento({
+	technologies,
 	theProblem,
 	theSolution,
 	theChallenges,
 	features,
+	metrics,
 }: ProjectBentoProps) {
 	return (
-		<div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+		<div className="grid grid-cols-1 md:grid-cols-3 gap-4 scroll-mt-25" id="description">
 			{/* 1. Problem Card - Large (Span 2 Columns) */}
-			<div className="md:col-span-2 md:row-span-2 rounded-3xl bg-white border border-slate-200 p-8 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow">
+			<div className="md:col-span-2 md:row-span-1 rounded-3xl bg-white border border-slate-200 p-8 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow">
 				<div>
 					<div className="w-10 h-10 rounded-full bg-red-50 flex items-center justify-center mb-4">
 						<AlertCircle className="text-red-500" size={24} />
@@ -45,29 +65,23 @@ export default function ProjectBento({
 				</div>
 				{/* <div className="text-xs font-mono text-slate-400 uppercase tracking-widest mt-4">
                   Status: Resolved
-               </div> */}
+						</div> */}
 			</div>
 
-			{/* 2. Solution Quick-Stat Card (Small) */}
-			<div className="rounded-3xl bg-gray-700 p-8 flex flex-col justify-center items-center text-white text-center shadow-lg shadow-gray-200/50">
-				<Lightbulb size={32} className="mb-2 opacity-80" />
-				<span className="text-sm font-medium uppercase tracking-tighter opacity-70">
-					Project Core
-				</span>
-				<h4 className="text-xl font-bold">Data-Driven Solution</h4>
+			<div className="md:col-span-1 md:row-span-2">
+				<TechMetrics metrics={metrics} />
 			</div>
 
 			{/* 3. Tech Architecture Card (Small) */}
-			<div className="rounded-3xl bg-slate-900 p-8 flex flex-col justify-between text-white">
+			<div className="rounded-3xl bg-slate-900 p-8 flex flex-col justify-between text-white md:col-span-2">
 				<div className="flex justify-between items-start">
-					<Database size={24} className="text-blue-400" />
-					<div className="px-2 py-1 bg-white/10 rounded text-[10px] uppercase font-bold">
+					<p className="text-xs text-amber-400 mb-1">Environment</p>
+					{/* <div className="px-2 py-1 bg-white/10 rounded text-[10px] uppercase font-bold">
 						Stack
-					</div>
+					</div> */}
 				</div>
 				<div>
-					<p className="text-sm text-slate-400">Environment</p>
-					<p className="text-lg font-semibold">Local-First PHP/MySQL</p>
+					<Technologies techIds={technologies}/>
 				</div>
 			</div>
 
@@ -85,51 +99,54 @@ export default function ProjectBento({
 				{/* Placeholder for a mini-graphic or feature list */}
 
 				<div className="flex-1 grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
-					{features.map(
-						(feature: Feature, index: number) => (
-							<div
-								key={index}
-								className="p-4 bg-white rounded-2xl border border-slate-100 shadow-sm"
-							>
-								<div className="font-bold text-blue-600">{feature.title}</div>
-								<div className="text-xs text-slate-500 text-balance">
-									{feature.detail}
-								</div>
+					{features.map((feature: Feature, index: number) => (
+						<div
+							key={index}
+							className="p-4 bg-white rounded-2xl border border-slate-100 shadow-sm"
+						>
+							<div className="font-bold text-blue-600">{feature.title}</div>
+							<div className="text-xs text-slate-500 text-balance">
+								{feature.detail}
 							</div>
-						)
-					)}
+						</div>
+					))}
 				</div>
 			</div>
 
 			{/* 5. Challenges Card (Iterates through your challenges array) */}
-			{theChallenges.map((challenge: Challenge, index) => (
-				<div
-					key={index}
-					className={`md:col-span-1 md:row-span-2 rounded-3xl p-8 border flex flex-col shadow-sm transition-all
-            ${
-							index % 2 === 0
-								? "bg-amber-50 border-amber-100"
-								: "bg-indigo-50 border-indigo-100"
-						}`}
-				>
+			<div className="flex flex-col md:flex-row md:col-span-3 md:row-span-2 rounded-3xl bg-white border border-slate-200 p-8 shadow-sm gap-4">
+				<h3 className="text-2xl font-bold text-slate-900 mb-2">
+					The Challenge
+				</h3>
+				{theChallenges.map((challenge: Challenge, index) => (
 					<div
-						className={`w-10 h-10 rounded-full flex items-center justify-center mb-4 
+						key={index}
+						className={`md:col-span-1 md:row-span-2 rounded-2xl p-8 border flex flex-col shadow-sm transition-all
+							${
+								index % 2 === 0
+									? "bg-amber-50 border-amber-100"
+									: "bg-indigo-50 border-indigo-100"
+							}`}
+					>
+						<div
+							className={`w-10 h-10 rounded-full flex items-center justify-center mb-4 
             ${
 							index % 2 === 0
 								? "bg-white text-amber-500"
 								: "bg-white text-indigo-500"
 						}`}
-					>
-						<ShieldAlert size={24} />
+						>
+							<ShieldAlert size={24} />
+						</div>
+						<h3 className="text-xl font-bold text-slate-900 mb-3">
+							{challenge.title}
+						</h3>
+						<p className="text-slate-600 text-sm leading-relaxed">
+							{challenge.description}
+						</p>
 					</div>
-					<h3 className="text-xl font-bold text-slate-900 mb-3">
-						{challenge.title}
-					</h3>
-					<p className="text-slate-600 text-sm leading-relaxed">
-						{challenge.description}
-					</p>
-				</div>
-			))}
+				))}
+			</div>
 		</div>
 	);
 }

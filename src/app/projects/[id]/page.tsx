@@ -1,5 +1,4 @@
-"use server";
-
+'use server';
 import { projects } from "@/app/data/projects";
 import { notFound } from "next/navigation";
 
@@ -27,7 +26,7 @@ export default async function ProjectDetail({
 		<>
 			<div className="min-h-screen w-full max-w-8xl place-self-center">
 				<div className=" mx-auto gap-8 flex flex-col">
-					<div className=" max-w-6xl mx-auto mb-5 md:mb-27">
+					<div className=" max-w-6xl mx-auto mb-5 md:mb-20">
 						<ProjectHero project={project} />
 					</div>
 					<div className="bg-gray-900 text-white font-light text-[12px] md:text-[14px]">
@@ -35,19 +34,6 @@ export default async function ProjectDetail({
 							<p>Role: {project.role}</p>
 							<p>Platform: {project.platform}</p>
 							<p>Timeline: {project.timeline}</p>
-							<div className="flex gap-1">
-								<h2>Technologies Used:</h2>
-								<div className="flex flex-wrap gap-2">
-									{project.technologies.map((tech, index) => (
-										<span
-											key={index}
-											className="bg-gray-100 text-gray-900 rounded px-1 font-semibold text-[10px] md:text-[12px]"
-										>
-											{tech}
-										</span>
-									))}
-								</div>
-							</div>
 						</div>
 					</div>
 					{/*Bento section */}
@@ -57,9 +43,11 @@ export default async function ProjectDetail({
 							theSolution={project.theSolution}
 							theChallenges={project.theChallenges} // This is an array of {title, description}
 							features={project.features}
+							metrics={project.technicalMetrics}
+							technologies={project.technologies}
 						/>
 						{/* Project Gallery */}
-						<div className="scroll-mt-25" id="gallery">
+						<div className="scroll-mt-25 mt-5" id="gallery">
 							<h3 className="text-2xl font-semibold mb-4">Gallery</h3>
 							{/* Project Images */}
 							<Card className="p-4 h-200">
