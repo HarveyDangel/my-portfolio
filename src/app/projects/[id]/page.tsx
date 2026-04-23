@@ -34,7 +34,7 @@ export default async function ProjectDetail({
 							<p>Role: {project.role}</p>
 							<p>Platform: {project.platform}</p>
 							<p>Timeline: {project.timeline}</p>
-							<div className="flex gap-1">
+							{/* <div className="flex gap-1">
 								<h2>Technologies Used:</h2>
 								<div className="flex flex-wrap gap-2">
 									{project.technologies.map((tech, index) => (
@@ -46,7 +46,7 @@ export default async function ProjectDetail({
 										</span>
 									))}
 								</div>
-							</div>
+							</div> */}
 						</div>
 					</div>
 					{/*Bento section */}
@@ -57,6 +57,7 @@ export default async function ProjectDetail({
 							theChallenges={project.theChallenges} // This is an array of {title, description}
 							features={project.features}
 							metrics={project.technicalMetrics}
+							technologies={project.technologies}
 						/>
 						{/* Project Gallery */}
 						<div className="scroll-mt-25" id="gallery">

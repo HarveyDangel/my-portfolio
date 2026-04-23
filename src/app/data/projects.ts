@@ -28,10 +28,6 @@ export interface ProjectDetails {
 			details: string;
 		};
 	};
-	// schemaComplexity: string[];
-	// buildArchitecture: string[];
-	// securityAudit: string[];
-	// responsiveness: string[];
 	theProblem: string;
 	theSolution: string;
 	features: {
@@ -56,7 +52,7 @@ export const projects: ProjectDetails[] = [
 		role: "Lead Developer",
 		timeline: "7 weeks",
 		platform: "Web",
-		technologies: ["Laravel", "Tailwind CSS", "Blade", "MySQL"],
+		technologies: ["Laravel", "TailwindCSS", "Blade", "MySQL"],
 		technicalMetrics: {
 			schema: {
 				title: "Schema Complexity",
@@ -86,7 +82,7 @@ export const projects: ProjectDetails[] = [
 		theProblem:
 			"Student organizations at Biliran Province State University frequently encountered scheduling conflicts when booking campus venues. Without a centralized system, venues were often double-booked for the same time slot, or overlapping durations led to logistical chaos. These bottlenecks created significant administrative strain and unnecessary stress for student organizers, often forcing last-minute event cancellations or venue changes.",
 		theSolution:
-			"I developed a comprehensive Event Management System designed to act as a single source of truth for campus resources. The system features a real-time availability checker and a robust scheduling engine that mathematically prevents overlapping bookings. By providing organizers with a transparent view of upcoming events and venue statuses, the tool eliminated scheduling uncertainty and streamlined the entire event planning lifecycle.",
+			"The team developed a comprehensive Event Management System designed to act as a single source of truth for campus resources. The system features a real-time availability checker and a robust scheduling engine that mathematically prevents overlapping bookings. By providing organizers with a transparent view of upcoming events and venue statuses, the tool eliminated scheduling uncertainty and streamlined the entire event planning lifecycle.",
 		features: [
 			{
 				title: "Request Management",
@@ -163,7 +159,7 @@ export const projects: ProjectDetails[] = [
 		theProblem:
 			"The Provincial Health Office (PHO) of Biliran struggled with a fragmented and time-consuming reporting process for child malnutrition. Staff were forced to manually audit local files to identify which municipalities had failed to submit consolidated data or which barangays had missing records. This lack of centralized visibility delayed critical health interventions and increased the risk of data inaccuracies.",
 		theSolution:
-			"I developed a centralized Malnutrition Monitoring System that automates data consolidation for the Biliran PHO. By integrating Geo-spatial Mapping, the system provides real-time visibility into provincial health status, allowing administrators to instantly identify reporting gaps and malnutrition 'hotspots' through an interactive visual interface.",
+			"The team developed a centralized Malnutrition Monitoring System that automates data consolidation for the Biliran PHO. By integrating Geo-spatial Mapping, the system provides real-time visibility into provincial health status, allowing administrators to instantly identify reporting gaps and malnutrition 'hotspots' through an interactive visual interface.",
 		theChallenges: [
 			{
 				title: "Late-Stage UI Pivot",

@@ -15,7 +15,7 @@ export default function TechMetrics({ metrics }: { metrics: TechMetricsData }) {
 	const metricsArray = Object.values(metrics);
 
 	return (
-		<div className="rounded-3xl bg-slate-900 p-6 md:p-8 flex flex-col justify-between text-white shadow-xl shadow-slate-300/10">
+		<div className="rounded-3xl bg-gray-900 p-6 md:p-8 flex flex-col justify-between text-white shadow-xl shadow-slate-300/10">
 			<div>
 				{/* Label and Title */}
 				<span className="text-[10px] font-bold uppercase tracking-widest text-amber-400 mb-2 block">
@@ -27,7 +27,7 @@ export default function TechMetrics({ metrics }: { metrics: TechMetricsData }) {
 			</div>
 
 			{/* The 2x2 Metrics Grid */}
-			<div className="grid grid-cols-2 gap-x-6 gap-y-6">
+			<div className="grid lg:grid-cols-2 gap-x-6 gap-y-6">
 				{metricsArray.map((item, index) => (
 					<div key={index} className="flex flex-col">
 						{/* The Metric Title (e.g., Security Audit) */}

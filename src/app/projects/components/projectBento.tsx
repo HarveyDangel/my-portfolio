@@ -2,11 +2,11 @@ import React from "react";
 import {
 	AlertCircle,
 	ShieldAlert,
-	Database,
 	Layout,
 } from "lucide-react";
 
 import TechMetrics from "./technicalMetric";
+import Technologies from "./technogies";
 
 interface MetricItem {
 	title: string;
@@ -34,6 +34,7 @@ interface Challenge {
 }
 
 interface ProjectBentoProps {
+	technologies: string[];
 	theProblem: string;
 	theSolution: string;
 	features: Feature[];
@@ -42,6 +43,7 @@ interface ProjectBentoProps {
 }
 
 export default function ProjectBento({
+	technologies,
 	theProblem,
 	theSolution,
 	theChallenges,
@@ -73,28 +75,15 @@ export default function ProjectBento({
 			{/* 3. Tech Architecture Card (Small) */}
 			<div className="rounded-3xl bg-slate-900 p-8 flex flex-col justify-between text-white md:col-span-2">
 				<div className="flex justify-between items-start">
-					<Database size={24} className="text-amber-400" />
-					<div className="px-2 py-1 bg-white/10 rounded text-[10px] uppercase font-bold">
+					<p className="text-xs text-amber-400 mb-1">Environment</p>
+					{/* <div className="px-2 py-1 bg-white/10 rounded text-[10px] uppercase font-bold">
 						Stack
-					</div>
+					</div> */}
 				</div>
 				<div>
-					<p className="text-sm text-slate-400">Environment</p>
-					<p className="text-lg font-semibold">Local-First PHP/MySQL</p>
+					<Technologies techIds={technologies}/>
 				</div>
 			</div>
-			{/* <div className="rounded-3xl bg-slate-900 p-8 flex flex-col justify-between text-white">
-				<div className="flex justify-between items-start">
-					<Database size={24} className="text-blue-400" />
-					<div className="px-2 py-1 bg-white/10 rounded text-[10px] uppercase font-bold">
-						Stack
-					</div>
-				</div>
-				<div>
-					<p className="text-sm text-slate-400">Environment</p>
-					<p className="text-lg font-semibold">Local-First PHP/MySQL</p>
-				</div>
-			</div> */}
 
 			{/* 4. Solution Description Card - Wide (Span 3 Columns) */}
 			<div className="md:col-span-3 md:row-span-2 rounded-3xl bg-gradient-to-br from-slate-50 to-white border border-slate-200 p-8 flex flex-col md:flex-row gap-8 items-center shadow-sm">
