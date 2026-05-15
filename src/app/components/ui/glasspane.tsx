@@ -32,7 +32,7 @@ export default function GlassPane({ children, className = "" }: GlassPaneProps) 
 	return (
 		<div
 			ref={containerRef}
-			className={`rounded-[8px] border-1 border-white/60 bg-gradient-to-tr from-white/10 to-white/20 lg:text-[16px] shadow-lg text-wrap w-full
+			className={`border border-slate-50/50 bg-gradient-to-tr from-slate-300/30 to-slate-200/60 lg:text-[16px] shadow-sm text-wrap w-full
          relative
          before:absolute before:content-[''] before:w-[100px] before:h-[100px] 
          before:bg-gradient-to-tr before:from-indigo-600 before:to-green-600 before:rounded-full before:blur-[50px] 
