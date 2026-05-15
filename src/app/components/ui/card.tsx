@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import { ReactNode, useEffect, useRef } from "react";
+import { ReactNode} from "react";
 
 interface CardProps {
    children: ReactNode;
