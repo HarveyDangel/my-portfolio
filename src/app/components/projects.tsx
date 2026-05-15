@@ -3,15 +3,14 @@
 import React from "react";
 import Image from "next/image";
 import { projects } from "../data/projects";
-
 import { motion } from "framer-motion";
+
+import GlassPane from "./ui/glasspane";
 
 export default function Portfolio() {
 	return (
 		<>
-			<div
-				className="py-[36px] px-[12px] flex flex-col gap-[24px] bg-white lg:py-[54px]"
-			>
+			<div className="py-[36px] px-[12px] flex flex-col gap-[24px] bg-white lg:py-[54px]">
 				<div className="max-w-6xl mx-auto">
 					<h3 className="text-[32px] font-bold p-[12px]">Projects</h3>
 
@@ -19,29 +18,28 @@ export default function Portfolio() {
 						{projects.map((project) => (
 							<motion.div
 								key={project.id}
-								className="bg-[#EFEDF8] shadow-xl rounded-md text-gray-900"
 								initial={{ opacity: 0, y: 50 }}
 								whileInView={{ opacity: 1, y: 0 }}
 								transition={{ duration: 0.8 }}
 								viewport={{ once: true }} // Animate only once when in view
 							>
-								<div className=" rounded-lg overflow-hidden md:grid md:grid-cols-2">
+								<GlassPane className=" rounded-3xl overflow-hidden md:grid md:grid-cols-2">
 									<Image
 										src={project.imageUrl}
 										alt={project.title}
 										width={500}
 										height={400}
-										className="w-full h-[256px] object-cover rounded-lg shadow-md"
+										className="w-full h-[256px] object-cover rounded-3xl shadow-md"
 										priority
 									/>
 									{/* PROJECT INFO */}
-									<div className="p-[18px] flex flex-col gap-[12px]">
+									<div className="p-6 flex flex-col gap-[12px]">
 										<h3 className="text-[20px] font-bold">{project.title}</h3>
 										<div className="flex flex-wrap gap-[8px] mb-[10px]">
 											{project.technologies.map((tech, index) => (
 												<span
 													key={index}
-													className="text-[8px] md:text-[12px] px-2 py-1 bg-gray-900 text-white rounded"
+													className="text-[8px] md:text-[12px] px-2 py-1 bg-slate-800 text-white rounded"
 												>
 													{tech}
 												</span>
@@ -79,7 +77,7 @@ export default function Portfolio() {
 											</a>
 										</div>
 									</div>
-								</div>
+								</GlassPane>
 							</motion.div>
 						))}
 					</div>

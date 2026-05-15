@@ -32,8 +32,8 @@ export default function Home() {
 							<h3 className="text-gray-900 text-[32px] text-nowrap font-bold p-[12px] text-center md:text-left lg:text-[40px]">
 								About me
 							</h3>
-							<div className="flex flex-col gap-[24px]">
-								<p className="text-gray-900 text-justify text-[14px] lg:text-lg p-[12px] lg:text-[16px]">
+							<div className="flex flex-col gap-8">
+								<p className="text-gray-900 text-justify text-lg px-8 leading-relaxed">
 									{`I specialize in building interactive and efficient web applications using `}
 									<strong className="italic">
 										Laravel, HTML, CSS, JavaScript, MySQL, and PHP.
@@ -47,7 +47,7 @@ export default function Home() {
 									{`. I enjoy solving complex problems and continuously learning
 									new technologies to improve my craft.`}
 								</p>
-								<p className="text-gray-900 text-justify text-[14px] lg:text-lg p-[12px] lg:text-[16px]">
+								<p className="text-gray-900 text-justify text-lg px-8 leading-relaxed">
 									{`My expertise includes developing full-stack applications, optimizing database performance, and creating responsive user interfaces. I have experience working on collaborative projects, and following best coding practices in building scalable applications.`}
 								</p>
 							</div>
@@ -61,7 +61,7 @@ export default function Home() {
 								{/* CARDS */}
 								{/* Slide In Section */}
 								<motion.div
-									className="flex flex-col flex-1/2 gap-[10px] p-[20px] bg-white rounded-lg shadow-md"
+									className="flex flex-col flex-1/2 gap-[10px] p-8 bg-white rounded-3xl shadow-sm border border-gray-50"
 									initial={{ opacity: 0, x: -100 }}
 									whileInView={{ opacity: 1, x: 0 }}
 									transition={{ duration: 0.8 }}
@@ -78,7 +78,7 @@ export default function Home() {
 									{/* <p className="text-[14px] text-justify lg:text-[16px]">{`Mobile & Web Apps: Crafting high-performance applications using modern frameworks like Expo and React Native.`}</p> */}
 								</motion.div>
 								<motion.div
-									className="flex flex-col flex-1/2 gap-[10px] p-[20px] bg-white rounded-lg shadow-md"
+									className="flex flex-col flex-1/2 gap-[10px] p-8 bg-white rounded-3xl shadow-sm border border-gray-50"
 									initial={{ opacity: 0, x: -100 }}
 									whileInView={{ opacity: 1, x: 0 }}
 									transition={{ duration: 0.8 }}
