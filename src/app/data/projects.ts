@@ -145,7 +145,7 @@ export const projects: ProjectDetails[] = [
 			},
 			security: {
 				title: "Security Audit",
-				metric: "4 Layer Protection",
+				metric: "2 Layer Protection",
 				details:
 					"Implement SQL Injection prevention, and bcrypt password hashing.",
 			},

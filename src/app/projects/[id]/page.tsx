@@ -2,9 +2,12 @@
 import { projects } from "@/app/data/projects";
 import { notFound } from "next/navigation";
 
-import Card from "@/app/components/ui/card";
+
+// import Card from "@/app/components/ui/card";
 import ProjectHero from "../components/projectHero";
 import ProjectBento from "../components/projectBento";
+import GlassPane from "@/app/components/ui/glasspane";
+import EmptyGallery from "@/app/components/ui/emptyGallery";
 
 // Make the component async
 export default async function ProjectDetail({
@@ -47,12 +50,12 @@ export default async function ProjectDetail({
 							technologies={project.technologies}
 						/>
 						{/* Project Gallery */}
-						<div className="scroll-mt-25 mt-5" id="gallery">
+						<div className="scroll-mt-25 mt-10" id="gallery">
 							<h3 className="text-2xl font-semibold mb-4">Gallery</h3>
 							{/* Project Images */}
-							<Card className="p-4 h-200">
-								<h3>Picture 1</h3>
-							</Card>
+							<GlassPane className="p-8 mb-5 rounded-3xl">
+								<EmptyGallery/>
+							</GlassPane>
 						</div>
 					</div>
 				</div>
