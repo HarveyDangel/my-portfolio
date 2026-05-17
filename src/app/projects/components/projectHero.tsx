@@ -57,7 +57,8 @@ export default function ProjectHero({project}: ProjectHeroProps) {
 							viewport={{ once: true }}
 						>
 							<a
-								href="https://github.com/HarveyDangel/eventsmanagementsystem"
+								href={project.githubUrl}
+								aria-label="Source Code"
 								className="flex gap-1 text-[14px] rounded-[12px] text-[#F7F9FC] bg-gray-800 p-[10px] shadow-lg transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:shadow-xl hover:shadow-amber-400 hover:bg-amber-400 hover:ring hover:ring-amber-50 active:scale-50"
 							>
 								<Github className="size-[20px]" />Source Code
