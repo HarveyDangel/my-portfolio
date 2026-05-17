@@ -53,14 +53,14 @@ const MobileMenu = ({
                   </span>
 
                   {currentLinks.map((link) => (
-                     <a
+                     <Link
                         key={link.name}
                         href={link.href}
                         className="text-xl font-medium hover:text-amber-500"
                         onClick={onClose}
                      >
                         {link.name}
-                     </a>
+                     </Link>
                   ))}
                </div>
             </motion.div>
@@ -96,13 +96,13 @@ export function Navbar() {
                {/* Desktop Menu Logic */}
                <div className="hidden md:flex gap-[24px] justify-center text-gray-900 text-[16px] col-span-3">
                   {(isProjectPage ? navLinksProjectPage : navLinks).map((link) => (
-                     <a
+                     <Link
                         key={link.name}
                         href={link.href}
                         className="hover:text-amber-500"
                      >
                         {link.name}
-                     </a>
+                     </Link>
                   ))}
                </div>
 
