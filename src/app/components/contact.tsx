@@ -45,12 +45,14 @@ export default function Contact() {
 						<div className="flex gap-[40px]">
 							<a
 								href="https://www.linkedin.com/in/harvey-dangel-a4b09b355/"
+								aria-label="LinkedIn Profile"
 								className="size-[68px] rounded-full bg-[#545F7F] p-[10px] shadow-lg transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500"
 							>
 								<Linkedin className="size-[48px] text-[#F7F9FC]" />
 							</a>
 							<a
 								href="https://github.com/HarveyDangel"
+								aria-label="GitHub Profile"
 								className="size-[68px] rounded-full bg-[#545F7F] p-[10px] shadow-lg transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500"
 							>
 								<Github className="size-[48px] text-[#F7F9FC]" />
