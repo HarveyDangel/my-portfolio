@@ -49,7 +49,7 @@ export default async function ProjectDetail({
 							technologies={project.technologies}
 						/>
 						{/* Project Gallery */}
-						<Gallery images={project.galleryUrls} />
+						<Gallery images={project.galleryUrls ?? [] } />
 					</div>
 				</div>
 			</div>
