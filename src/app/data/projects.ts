@@ -42,7 +42,10 @@ export interface ProjectDetails {
 	imageUrl: string;
 	liveUrl?: string;
 	githubUrl?: string;
-	galleryUrls?: string[];
+	galleryUrls?: {
+		src: string;
+		alt: string;
+	}[];
 }
 
 export const projects: ProjectDetails[] = [
@@ -121,12 +124,12 @@ export const projects: ProjectDetails[] = [
 		],
 		imageUrl: "/images/EventMS.png",
 		galleryUrls: [
-			"/images/eventms/addevents.png", 
-			"/images/eventms/dashboard.png", 
-			"/images/eventms/events.png", 
-			"/images/eventms/feedback.png", 
-			"/images/eventms/history.png", 
-			"/images/eventsms/register.png"
+			{ src: "/images/eventms/login.png", alt: "Login Page" },
+			{ src: "/images/eventms/dashboard.png", alt: "Dashboard Page" },
+			{ src: "/images/eventms/events.png", alt: "Events Page" },
+			{ src: "/images/eventms/addevents.png", alt: "Add Events Page" },
+			{ src: "/images/eventms/feedback.png", alt: "Feedback Page" },
+			{ src: "/images/eventms/history.png", alt: "History Page" },
 		],
 		githubUrl: "https://github.com/HarveyDangel/eventsmanagementsystem",
 		// liveUrl: "https://project-demo.com",
@@ -163,8 +166,7 @@ export const projects: ProjectDetails[] = [
 			responsiveness: {
 				title: "Responsiveness",
 				metric: "No Breakpoints",
-				details:
-					"The UX/UI design is focused in Desktop view",
+				details: "The UX/UI design is focused in Desktop view",
 			},
 		},
 		theProblem:
@@ -207,10 +209,10 @@ export const projects: ProjectDetails[] = [
 		],
 		imageUrl: "/images/MMSGSM.png",
 		galleryUrls: [
-			"/images/gsmmms/children.png", 
-			"/images/gsmmms/dashboard.png", 
-			"/images/gsmmms/map.png", 
-			"/images/gsmmms/report.png"
+			{ src: "/images/gsmmms/children.png", alt: "Children Tab" },
+			{ src: "/images/gsmmms/dashboard.png", alt: "Dashboard Page" },
+			{ src: "/images/gsmmms/map.png", alt: "Map Page" },
+			{ src: "/images/gsmmms/report.png", alt: "Report Page" },
 		],
 		githubUrl: "https://github.com/HarveyDangel/malnutrition-monitoring-system",
 		// liveUrl: "https://another-project.com",
