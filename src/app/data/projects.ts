@@ -1,5 +1,6 @@
 export interface ProjectDetails {
 	id: number;
+	slug?: string;
 	title: string;
 	description: string;
 	role: string;
@@ -41,11 +42,13 @@ export interface ProjectDetails {
 	imageUrl: string;
 	liveUrl?: string;
 	githubUrl?: string;
+	galleryUrls?: string[];
 }
 
 export const projects: ProjectDetails[] = [
 	{
 		id: 1,
+		slug: "event-management-system",
 		title: "Event Management System of Students Organization of BiPSU",
 		description:
 			"A web-based platform designed to simplify event scheduling, tracking, and feedback collection. It allows students, faculty, and administrators to manage events efficiently with role-based access control.",
@@ -116,13 +119,21 @@ export const projects: ProjectDetails[] = [
 					"Given the university’s limited physical space, I had to implement a 'Pending Request' logic. This allowed administrators to evaluate and prioritize high-impact events over routine meetings when multiple organizations vied for the same high-demand venue.",
 			},
 		],
-		// theChallenges:["", ""],
 		imageUrl: "/images/EventMS.png",
-		// liveUrl: "https://project-demo.com",
+		galleryUrls: [
+			"/images/eventms/addevents.png", 
+			"/images/eventms/dashboard.png", 
+			"/images/eventms/events.png", 
+			"/images/eventms/feedback.png", 
+			"/images/eventms/history.png", 
+			"/images/eventsms/register.png"
+		],
 		githubUrl: "https://github.com/HarveyDangel/eventsmanagementsystem",
+		// liveUrl: "https://project-demo.com",
 	},
 	{
 		id: 2,
+		slug: "malnutrition-monitoring-system",
 		title: "Geo-Spatial Mapping and Monitoring System of Malnutrition Trends",
 		description:
 			"A web-based platform for mapping and monitoring malnutrition cases in Biliran Island using PHP, MySQL, and Leaflet.js with role-based access for DOH, PHO, and RHU.",
@@ -195,8 +206,14 @@ export const projects: ProjectDetails[] = [
 			},
 		],
 		imageUrl: "/images/MMSGSM.png",
-		// liveUrl: "https://another-project.com",
+		galleryUrls: [
+			"/images/gsmmms/children.png", 
+			"/images/gsmmms/dashboard.png", 
+			"/images/gsmmms/map.png", 
+			"/images/gsmmms/report.png"
+		],
 		githubUrl: "https://github.com/HarveyDangel/malnutrition-monitoring-system",
+		// liveUrl: "https://another-project.com",
 	},
 	// {
 	//   id: 3,
