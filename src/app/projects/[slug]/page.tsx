@@ -10,22 +10,25 @@ import Gallery from "../components/gallery";
 
 // Make the component async
 export default async function ProjectDetail({
-	params,
+	params
 }: {
-	params: Promise<{ id: string }>;
+	// params: Promise<{ id: string; slug: string }>;
+	params: Promise<{ slug: string }>;
 }) {
 	// Await the entire params object, not individual properties
 	const resolvedParams = await params;
-	const id = resolvedParams.id;
+	// const id = resolvedParams.id;
+	const slug = resolvedParams.slug;
 
-	const project = projects.find((p) => p.id === parseInt(id));
+	// const project = projects.find((p) => p.id === parseInt(id) && p.slug === slug);
+	const project = projects.find((p) =>  p.slug === slug);
 
 	if (!project) {
 		notFound(); // Use Next.js notFound() instead of custom div
 	}
 
 	return (
-		<>
+		<main>
 			<div className="min-h-screen w-full max-w-8xl place-self-center">
 				<div className=" mx-auto gap-8 flex flex-col">
 					<div className=" max-w-6xl mx-auto mb-5 md:mb-20">
@@ -53,6 +56,6 @@ export default async function ProjectDetail({
 					</div>
 				</div>
 			</div>
-		</>
+		</main>
 	);
 }
