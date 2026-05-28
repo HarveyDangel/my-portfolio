@@ -1,26 +1,50 @@
-'use server';
 import { projects } from "@/app/data/projects";
 import { notFound } from "next/navigation";
-
+import type { Metadata } from "next";
 
 // import Card from "@/app/components/ui/card";
 import ProjectHero from "../components/projectHero";
 import ProjectBento from "../components/projectBento";
 import Gallery from "../components/gallery";
 
-// Make the component async
-export default async function ProjectDetail({
-	params
-}: {
-	// params: Promise<{ id: string; slug: string }>;
-	params: Promise<{ slug: string }>;
-}) {
-	// Await the entire params object, not individual properties
-	const resolvedParams = await params;
-	// const id = resolvedParams.id;
-	const slug = resolvedParams.slug;
+type Props = {
+	params: Promise<{ slug: string; }>;
+};
 
-	// const project = projects.find((p) => p.id === parseInt(id) && p.slug === slug);
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+	const { slug } =await params;
+	const project = projects.find((p) => p.slug === slug);
+
+	if (!project) {
+		return {
+			title: "Project Not Found | Harb Coded",
+			description: "The project you are looking for does not exist.",
+		};
+	}
+
+	return {
+		title: `${project.title} | Harb Coded`,
+		description: project.description,
+		openGraph: {
+			title: `${project.title} | Harb Coded`,
+			description: project.description,
+			type: "article",
+			images: [
+				{
+					url: project.imageUrl,
+				},
+			],
+		},
+		alternates: {
+			canonical: `/projects/${project.slug}`,
+		},
+	};
+}
+
+// Make the component async
+export default async function ProjectDetail({ params }: Props) {
+	// Await the entire params object, not individual properties
+	const { slug } = await params;
 	const project = projects.find((p) =>  p.slug === slug);
 
 	if (!project) {

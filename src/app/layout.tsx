@@ -69,6 +69,14 @@ export const metadata: Metadata = {
    title: "Harb Coded | Harvey Dangel | Full-Stack Developer Portfolio",
    description:
       "Explore Harvey Dangel’s portfolio showcasing modern web development projects using React, Next.js, Laravel, and full-stack technologies.",
+   metadataBase: new URL("https://harb-coded.vercel.app"),
+   alternates: { 
+      canonical: "/",
+      languages: {
+         "en-US": "/en",
+         "fr-FR": "/fr",
+      },
+   },
    verification: {
       google: process.env.GOOGLE_SITE_VERIFICATION,
    },
