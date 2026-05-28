@@ -7,7 +7,6 @@ import { notFound } from "next/navigation";
 import ProjectHero from "../components/projectHero";
 import ProjectBento from "../components/projectBento";
 import Gallery from "../components/gallery";
-import { parseStaticPathsResult } from "next/dist/lib/fallback";
 
 // Make the component async
 export default async function ProjectDetail({
