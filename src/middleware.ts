@@ -15,7 +15,7 @@ export function middleware(request: NextRequest) {
     style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
     img-src 'self' blob: data: https://images.unsplash.com https://res.cloudinary.com;
     font-src 'self' https://fonts.gstatic.com;
-    frame-src 'none';
+    frame-src 'self';
     object-src 'none';
     connect-src 'self' https://www.google-analytics.com;
     base-uri 'self';
