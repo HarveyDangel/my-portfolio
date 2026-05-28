@@ -48,7 +48,7 @@ export function middleware(request: NextRequest) {
   
   response.headers.set('X-Frame-Options', 'DENY');
   response.headers.set('Permissions-Policy', 'camera=(), microphone=(), geolocation=(), interest-cohort=()');
-  
+
 	return response;
 }
 
@@ -62,6 +62,6 @@ export const config = {
 		 * - images (_next/image)
 		 * - system icons / manifest files
 		 */
-		"/((?!api|_next/static|_next/image|favicon.ico|sitemap.xml|robots.txt|[^?]*\\.(?:html|css|js(?!on)|jpe?g|webp|png|gif|svg|ico|woff2?|map|wasm)).*)",
+		"/((?!api|_next/static|_next/image|favicon.ico|sitemap\\.xml|robots\\.txt|[^?]*\\.(?:html|css|js(?!on)|jpe?g|webp|png|gif|svg|ico|woff2?|map|wasm)).*)",
 	],
 };
