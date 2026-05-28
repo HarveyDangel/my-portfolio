@@ -24,7 +24,7 @@ interface GalleryProps {
 export default function Gallery({ images }: GalleryProps) {
 	return (
 		<div className="scroll-mt-25 mt-10" id="gallery">
-			<h3 className="text-2xl font-semibold mb-4">Gallery</h3>
+			<h3 className="text-2xl font-semibold mb-4 px-2 lg:px-0">Gallery</h3>
 			{/* Project Images */}
 			<GlassPane className="p-5 mb-5 rounded-3xl">
 				{images.length > 0 ? (

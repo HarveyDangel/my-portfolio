@@ -70,7 +70,7 @@ export default function Portfolio() {
 												</a>
 											)}
 											<a
-												href={`/projects/${project.id}`}
+												href={`/projects/${project.slug}`}
 												className="text-blue-600 dark:text-blue-400 hover:underline mr-4"
 											>
 												View Details
