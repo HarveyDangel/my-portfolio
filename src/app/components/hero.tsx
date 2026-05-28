@@ -18,7 +18,7 @@ export default function Hero() {
 							alt="Profile Picture"
 							width={500}
 							height={500}
-							className="object-cover overflow-visible h-[500px]"
+							className="object-cover overflow-hidden h-[500px]"
 							priority
 						/>
 					</motion.div>
