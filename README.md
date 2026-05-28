@@ -37,37 +37,56 @@ This is my personal portfolio website — designed to be minimal, load fast, and
 
 ---
 
-<!--## Folder Structure
+## Folder Structure
 
 ```
-portfolio/
-├── app/
-│   ├── layout.tsx          # Root layout
-│   ├── page.tsx            # Home page
-│   ├── about/
-│   │   └── page.tsx        # About section
-│   └── projects/
-│       └── page.tsx        # Projects section
-├── components/
-│   ├── ui/                 # Reusable UI components
-│   ├── Navbar.tsx
-│   └── Footer.tsx
-├── public/
-│   └── images/             # Static assets
-├── styles/
-│   └── globals.css
-├── lib/
-│   └── utils.ts            # Helper functions
-├── types/
-│   └── index.ts            # Shared TypeScript types
-├── .env.local              # Environment variables (not committed)
-├── next.config.ts
-├── tailwind.config.ts
-└── tsconfig.json
+app
+ ┣ components
+ ┃ ┣ types
+ ┃ ┃ ┗ techStack.ts
+ ┃ ┣ ui
+ ┃ ┃ ┣ button.tsx
+ ┃ ┃ ┣ card.tsx
+ ┃ ┃ ┣ emptyGallery.tsx
+ ┃ ┃ ┣ glasspane.tsx
+ ┃ ┃ ┣ header.tsx
+ ┃ ┃ ┣ loading.tsx
+ ┃ ┃ ┗ navbar.tsx
+ ┃ ┣ about.tsx
+ ┃ ┣ backtotop.tsx
+ ┃ ┣ contact.tsx
+ ┃ ┣ hero.tsx
+ ┃ ┣ portfolio.tsx
+ ┃ ┣ projects.tsx
+ ┃ ┣ scroll.tsx
+ ┃ ┣ services.tsx
+ ┃ ┣ techIcon.tsx
+ ┃ ┗ techstack.tsx
+ ┣ context
+ ┃ ┣ ProjectContext.tsx
+ ┃ ┗ ThemeContext.tsx
+ ┣ data
+ ┃ ┣ projects.ts
+ ┃ ┗ techstack.ts
+ ┣ loop
+ ┃ ┗ page.tsx
+ ┣ projects
+ ┃ ┣ components
+ ┃ ┃ ┣ gallery.tsx
+ ┃ ┃ ┣ projectBento.tsx
+ ┃ ┃ ┣ projectHero.tsx
+ ┃ ┃ ┣ technicalMetric.tsx
+ ┃ ┃ ┗ technogies.tsx
+ ┃ ┗ [slug]
+ ┃ ┃ ┗ page.tsx
+ ┣ favicon.ico
+ ┣ globals.css
+ ┣ layout.tsx
+ ┗ page.tsx
 ```
 
 ---
--->
+
 ## Deployment
 
 This portfolio is deployed on **Vercel** with automatic deployments on every push to `main`.
