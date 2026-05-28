@@ -109,14 +109,17 @@ export default function Home() {
 							</h2>
 							<div className="py-[16px] flex gap-[36px] justify-center">
 								<a
+									aria-label="LinkedIn Profile"
 									href="https://www.linkedin.com/in/harvey-dangel-a4b09b355/"
 									className="size-[48px] rounded-[12px] text-gray-800 hover:text-white bg-white p-[10px] shadow-lg transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-amber-500 hover:shadow-amber-400 hover:ring hover:ring-white active:scale-50"
 								>
 									<Linkedin className="size-[28px] text-center" />
 								</a>
 								<a
+									aria-label="Github Profile"
 									href="https://github.com/HarveyDangel"
 									className="size-[48px] rounded-[12px] text-gray-800 hover:text-white bg-white p-[10px] shadow-lg transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-amber-500 hover:shadow-amber-400 hover:ring hover:ring-white active:scale-50"
+
 								>
 									<Github className="size-[28px]" />
 								</a>

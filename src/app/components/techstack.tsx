@@ -241,7 +241,7 @@ type TechCardProps = {
 const TechCard = ({ tech }: TechCardProps) => {
 	return (
 		<>
-			<div className="flex flex-col items-center justify-center p-[16px]">
+			<div className="flex flex-col items-center justify-center p-[16px]" aria-label={`${tech.name} Icon`}>
 				<span className="text-5xl mb-2 text-center">{tech.icon}</span>
 				<span className="text-[14px] font-medium text-center">{tech.name}</span>
 			</div>
