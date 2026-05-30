@@ -30,7 +30,7 @@ export default function Portfolio() {
 										width={500}
 										height={400}
 										className="w-full h-[256px] object-cover rounded-3xl shadow-md"
-										priority
+										loading="lazy"
 									/>
 									{/* PROJECT INFO */}
 									<div className="p-6 flex flex-col gap-[12px]">

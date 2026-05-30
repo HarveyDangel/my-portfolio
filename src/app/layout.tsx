@@ -88,15 +88,15 @@ export default async function RootLayout({
    children: React.ReactNode;
 }>) {
    // 2. Await headers to retrieve the nonce generated in your middleware
-   const headersList = await headers();
-   const nonce = headersList.get("x-nonce") || undefined;
+   const nonce = (await headers()).get('x-nonce') || '';
 
    return (
       // 3. Pass the nonce to the HTML tag so Next.js applies it to all framework inline scripts
       <html 
          lang="en" 
          className={`${inter.variable} scroll-smooth`}
-         nonce={nonce} 
+         nonce={nonce}
+         suppressHydrationWarning={true}
       >
          <body className="antialiased bg-gray-100/60">
             <ThemeProvider>

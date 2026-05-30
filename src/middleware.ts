@@ -26,12 +26,12 @@ export function middleware(request: NextRequest) {
 		.replace(/\s{2,}/g, " ")
 		.trim();
 
-	// 3. Clone existing headers and inject our CSP values
+	// 3. Clone existing headers and inject CSP values
 	const requestHeaders = new Headers(request.headers);
 	requestHeaders.set("x-nonce", nonce); // Sent upstream for layout.tsx to read
 	requestHeaders.set("Content-Security-Policy", cspHeader);
 
-	// 4. Create the response object, attaching our modified headers
+	// 4. Create the response object, attaching modified headers
 	const response = NextResponse.next({
 		request: {
 			headers: requestHeaders,
