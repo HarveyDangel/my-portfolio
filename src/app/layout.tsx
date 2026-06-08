@@ -40,7 +40,7 @@ export default async function RootLayout({
 }: Readonly<{
 	children: React.ReactNode;
 }>) {
-	// 2. Await headers to retrieve the nonce generated in your middleware
+	// 2. Await headers to retrieve the nonce generated in your proxy
 	const headersList = await headers();
 	const nonce = headersList.get("x-nonce") || undefined;
 
