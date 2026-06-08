@@ -1,6 +1,6 @@
 "use client"
 
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useContext, useState, useEffect } from 'react';
 
 type ThemeContextType = {
   darkMode: boolean;
@@ -10,9 +10,12 @@ type ThemeContextType = {
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [darkMode, setDarkMode] = useState(
-    () => window.matchMedia('(prefers-color-scheme: dark)').matches
-  );
+  const [darkMode, setDarkMode] = useState(false);
+
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setDarkMode(window.matchMedia('(prefers-color-scheme: dark)').matches);
+  }, []);
 
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
