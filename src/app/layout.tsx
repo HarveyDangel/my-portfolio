@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { headers } from "next/headers";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
@@ -20,7 +21,7 @@ const inter = Inter({
 export const metadata: Metadata = {
 	title: "Harb Coded | Harvey Dangel | Full-Stack Developer Portfolio",
 	description:
-		"Explore Harvey Dangel's portfolio showcasing modern web development projects using React, Next.js, Laravel, and full-stack technologies.",
+		"Explore Harvey Dangel’s portfolio showcasing modern web development projects using React, Next.js, Laravel, and full-stack technologies.",
 	metadataBase: new URL("https://harb-coded.vercel.app"),
 	alternates: {
 		canonical: "/",
@@ -34,17 +35,23 @@ export const metadata: Metadata = {
 	},
 };
 
-export default function RootLayout({
+export default async function RootLayout({
 	children,
 }: Readonly<{
 	children: React.ReactNode;
 }>) {
+	// 2. Await headers to retrieve the nonce generated in your proxy
+	const headersList = await headers();
+	const nonce = headersList.get("x-nonce") || undefined;
+
 	return (
-		<html lang="en" className={`${inter.variable} scroll-smooth`}>
+		// 3. Pass the nonce to the HTML tag so Next.js applies it to all framework inline scripts
+		<html lang="en" className={`${inter.variable} scroll-smooth`} nonce={nonce}>
 			<body className="antialiased bg-gray-100/60">
 				<ThemeProvider>
 					<ProjectProvider>
 						<Navbar />
+						{/* <Header/> */}
 						{children}
 						<BackToTop />
 					</ProjectProvider>
