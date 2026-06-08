@@ -6,7 +6,7 @@ import {
 	SiWordpress,
 	SiFigma,
 	SiHtml5,
-	SiCss3,
+	SiCss,
 	SiJavascript,
 	SiGithub,
 	SiGit,
@@ -55,7 +55,7 @@ const TechStack = () => {
 		{
 			id: "css",
 			name: "CSS",
-			icon: <SiCss3 className="text-blue-600" />,
+			icon: <SiCss className="text-blue-600" />,
 			category: "frontend",
 		},
 		{
