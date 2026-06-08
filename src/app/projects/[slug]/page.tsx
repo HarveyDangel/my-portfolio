@@ -7,10 +7,6 @@ import ProjectHero from "../components/projectHero";
 import ProjectBento from "../components/projectBento";
 import Gallery from "../components/gallery";
 
-export function generateStaticParams() {
-	return projects.map((project) => ({ slug: project.slug }));
-}
-
 type Props = {
 	params: Promise<{ slug: string; }>;
 };
