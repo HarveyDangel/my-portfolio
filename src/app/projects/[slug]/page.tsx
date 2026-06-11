@@ -32,8 +32,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 			images: [
 				{
 					url: project.imageUrl,
+					width: 1200,
+					height: 630,
+					alt: project.title,
 				},
 			],
+		},
+		twitter: {
+			card: "summary_large_image",
+			title: `${project.title} | Harb Coded`,
+			description: project.description,
+			images: [project.imageUrl],
 		},
 		alternates: {
 			canonical: `/projects/${project.slug}`,

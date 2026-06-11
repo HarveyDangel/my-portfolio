@@ -23,6 +23,30 @@ export const metadata: Metadata = {
 	description:
 		"Explore Harvey Dangel’s portfolio showcasing modern web development projects using React, Next.js, Laravel, and full-stack technologies.",
 	metadataBase: new URL("https://harb-coded.vercel.app"),
+	openGraph: {
+		title: "Harb Coded | Harvey Dangel | Full-Stack Developer Portfolio",
+		description:
+			"Explore Harvey Dangel’s portfolio showcasing modern web development projects using React, Next.js, Laravel, and full-stack technologies.",
+		url: "https://harb-coded.vercel.app",
+		siteName: "Harb Coded",
+		images: [
+			{
+				url: "/og-image.webp",
+				width: 1200,
+				height: 630,
+				alt: "Harvey Dangel - Full-Stack Developer",
+			},
+		],
+		locale: "en_US",
+		type: "website",
+	},
+	twitter: {
+		card: "summary_large_image",
+		title: "Harb Coded | Harvey Dangel | Full-Stack Developer Portfolio",
+		description:
+			"Explore Harvey Dangel’s portfolio showcasing modern web development projects using React, Next.js, Laravel, and full-stack technologies.",
+		images: ["/og-image.webp"],
+	},
 	alternates: {
 		canonical: "/",
 		languages: {
