@@ -35,7 +35,7 @@ export default function ProjectHero({project}: ProjectHeroProps) {
 						/>
 					</motion.div>
 					{/* INTRO */}
-					<div className="text-gray-900 px-[12px] md:place-self-center md:h-full">
+					<div className="text-primary px-[12px] md:place-self-center md:h-full">
 						<motion.div
 							className="text-4xl font-bold"
 							initial={{ opacity: 0, y: 20 }}
@@ -59,7 +59,7 @@ export default function ProjectHero({project}: ProjectHeroProps) {
 							<a
 								href={project.githubUrl}
 								aria-label="Source Code"
-								className="flex mb-5 gap-1 text-[14px] rounded-[12px] text-[#F7F9FC] bg-gray-800 p-[10px] shadow-lg transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:shadow-xl hover:shadow-amber-400 hover:bg-amber-400 hover:ring hover:ring-amber-50 active:scale-50"
+								className="flex mb-5 gap-1 text-[14px] rounded-[12px] text-inverse bg-inverse p-[10px] shadow-lg transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:shadow-xl hover:shadow-amber-400 hover:bg-amber-400 hover:ring hover:ring-amber-50 active:scale-50"
 							>
 								<Github className="size-[20px]" />Source Code
 							</a>

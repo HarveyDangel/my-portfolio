@@ -1,7 +1,7 @@
 
 export default function EmptyGallery() {
    return (
-      <div className="flex flex-col items-center justify-center h-full text-gray-500">
+      <div className="flex flex-col items-center justify-center h-full text-tertiary">
          <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-16 w-16 mb-4"

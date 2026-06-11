@@ -70,8 +70,16 @@ export default async function RootLayout({
 
 	return (
 		// 3. Pass the nonce to the HTML tag so Next.js applies it to all framework inline scripts
-		<html lang="en" className={`${inter.variable} scroll-smooth`} nonce={nonce}>
-			<body className="antialiased bg-gray-100/60">
+		<html lang="en" className={`${inter.variable} scroll-smooth`} nonce={nonce} suppressHydrationWarning>
+			<head>
+				<script
+					nonce={nonce}
+					dangerouslySetInnerHTML={{
+						__html: `(function(){try{var t=localStorage.getItem('theme');if(t==='dark'){document.documentElement.setAttribute('data-theme','dark')}else{document.documentElement.setAttribute('data-theme','light')}}catch(e){}})()`,
+					}}
+				/>
+			</head>
+			<body className="antialiased">
 				<ThemeProvider>
 					<ProjectProvider>
 						<Navbar />

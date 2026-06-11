@@ -24,7 +24,7 @@ export default function Hero() {
 						/>
 					</motion.div>
 					{/* INTRO */}
-					<div className="text-gray-900 px-[12px] md:place-self-center md:h-full">
+					<div className="text-primary px-[12px] md:place-self-center md:h-full">
 						<motion.div
 							className="text-4xl font-bold"
 							initial={{ opacity: 0, y: 20 }}
@@ -51,16 +51,16 @@ export default function Hero() {
 							<a
 								href="https://www.linkedin.com/in/harvey-dangel-a4b09b355/"
 								aria-label="LinkedIn Profile"
-								className="size-[48px] rounded-[12px] bg-gray-800 p-[10px] shadow-lg transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:shadow-xl hover:shadow-amber-400 hover:bg-amber-400 hover:ring hover:ring-amber-50 active:scale-50"
+								className="size-[48px] rounded-[12px] bg-inverse p-[10px] shadow-lg transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:shadow-xl hover:shadow-amber-400 hover:bg-amber-400 hover:ring hover:ring-amber-50 active:scale-50"
 							>
-								<Linkedin className="size-[28px] text-[#F7F9FC] text-center" />
+								<Linkedin className="size-[28px] text-inverse text-center" />
 							</a>
 							<a
 								href="https://github.com/HarveyDangel"
 								aria-label="GitHub Profile"
-								className="size-[48px] rounded-[12px] bg-gray-800 p-[10px] shadow-lg transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:shadow-xl hover:shadow-amber-400 hover:bg-amber-400 hover:ring hover:ring-amber-50 active:scale-50"
+								className="size-[48px] rounded-[12px] bg-inverse p-[10px] shadow-lg transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:shadow-xl hover:shadow-amber-400 hover:bg-amber-400 hover:ring hover:ring-amber-50 active:scale-50"
 							>
-								<Github className="size-[28px] text-[#F7F9FC]" />
+								<Github className="size-[28px] text-inverse" />
 							</a>
 						</motion.div>
 					</div>

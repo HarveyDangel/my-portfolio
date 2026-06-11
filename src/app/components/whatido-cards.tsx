@@ -5,7 +5,7 @@ export default function WhatIDoCards() {
     <div className="flex flex-col gap-[24px] p-[12px] md:flex-row">
       <ScrollAnimation
         animation="slide-in-left"
-        className="flex flex-col flex-1/2 gap-[10px] p-8 bg-white rounded-3xl shadow-sm border border-gray-50"
+        className="flex flex-col flex-1/2 gap-[10px] p-8 bg-card rounded-3xl shadow-sm border border-card"
       >
         <h4 className="p-[10px] text-center text-[24px] font-medium">
           Software Development
@@ -14,7 +14,7 @@ export default function WhatIDoCards() {
       </ScrollAnimation>
       <ScrollAnimation
         animation="slide-in-left"
-        className="flex flex-col flex-1/2 gap-[10px] p-8 bg-white rounded-3xl shadow-sm border border-gray-50"
+        className="flex flex-col flex-1/2 gap-[10px] p-8 bg-card rounded-3xl shadow-sm border border-card"
       >
         <h4 className="p-[10px] text-center text-[24px] font-medium">
           UX/UI Design
