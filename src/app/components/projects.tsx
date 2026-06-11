@@ -1,9 +1,7 @@
-"use client";
-
 import React from "react";
 import Image from "next/image";
 import { projects } from "../data/projects";
-import { motion } from "framer-motion";
+import ScrollAnimation from "./scroll-animation";
 
 import GlassPane from "./ui/glasspane";
 
@@ -16,13 +14,7 @@ export default function Portfolio() {
 
 					<div className="grid grid-cols-1 gap-6">
 						{projects.map((project) => (
-							<motion.div
-								key={project.id}
-								initial={{ opacity: 0, y: 50 }}
-								whileInView={{ opacity: 1, y: 0 }}
-								transition={{ duration: 0.8 }}
-								viewport={{ once: true }} // Animate only once when in view
-							>
+							<ScrollAnimation key={project.id} animation="fade-in-up">
 								<GlassPane className=" rounded-3xl overflow-hidden md:grid md:grid-cols-2">
 									<Image
 										src={project.imageUrl}
@@ -49,16 +41,6 @@ export default function Portfolio() {
 											{project.description}
 										</p>
 										<div className="flex space-x-4 bottom-0 mt-auto">
-											{/* {project.liveUrl && (
-                                    <a
-                                       href={project.liveUrl}
-                                       target="_blank"
-                                       rel="noopener noreferrer"
-                                       className="text-blue-600 dark:text-blue-400 hover:underline"
-                                    >
-                                       Live Demo
-                                    </a>
-                                 )} */}
 											{project.githubUrl && (
 												<a
 													href={project.githubUrl}
@@ -78,7 +60,7 @@ export default function Portfolio() {
 										</div>
 									</div>
 								</GlassPane>
-							</motion.div>
+							</ScrollAnimation>
 						))}
 					</div>
 				</div>

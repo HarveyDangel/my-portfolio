@@ -24,7 +24,7 @@ import {
 } from "react-icons/si";
 
 import { TechItem } from "./types/techStack";
-import { motion } from "framer-motion";
+import ScrollAnimation from "./scroll-animation";
 
 const GradientProvider = () => (
 	<svg width="0" height="0" className="absolute">
@@ -205,13 +205,11 @@ const TechStack = () => {
 				<GradientProvider />
 				<div className="space-y-12">
 					{Object.entries(groupedTech).map(([category, items]) => (
-						<motion.div
+						<ScrollAnimation
 							key={category}
+							animation="scale-in"
+							once={false}
 							className="flex flex-col gap-[24px]"
-							initial={{ opacity: 0, scale: 0.8 }}
-							whileInView={{ opacity: 1, scale: 1 }}
-							transition={{ duration: 0.8 }}
-							viewport={{ once: false }} // will animate every time it enters view
 						>
 							<div className=" flex flex-col justify-center">
 								<h3 className="text-[24px] font-semibold text-center">
@@ -225,7 +223,7 @@ const TechStack = () => {
 									))}
 								</div>
 							</div>
-						</motion.div>
+						</ScrollAnimation>
 					))}
 				</div>
 			</div>

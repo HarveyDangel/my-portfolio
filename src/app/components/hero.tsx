@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import { Github, Linkedin } from "lucide-react";
 import { motion } from "framer-motion";
@@ -14,7 +15,7 @@ export default function Hero() {
 						transition={{ duration: 0.8 }}
 					>
 						<Image
-							src="/images/avatar.png"
+							src="/images/avatar.webp"
 							alt="Profile Picture"
 							width={500}
 							height={500}

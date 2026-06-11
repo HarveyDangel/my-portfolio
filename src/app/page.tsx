@@ -1,12 +1,12 @@
-"use client";
-
 import { Github, Linkedin } from "lucide-react";
 import { EnvelopeIcon, MapPinIcon, PhoneIcon } from "@heroicons/react/24/solid";
-import { motion } from "framer-motion";
+import dynamic from "next/dynamic";
 
-import Portfolio from "./components/projects";
-import TechStack from "./components/techstack";
 import Hero from "./components/hero";
+import WhatIDoCards from "./components/whatido-cards";
+
+const Portfolio = dynamic(() => import("./components/projects"));
+const TechStack = dynamic(() => import("./components/techstack"));
 
 export default function Home() {
 	return (
@@ -23,7 +23,6 @@ export default function Home() {
 							</p>
 						</div>
 					</div>
-					{/* <About/> */}
 
 					{/* ABOUT SECTION */}
 					<div id="about" className="scroll-mt-16"></div>
@@ -57,40 +56,7 @@ export default function Home() {
 							<h3 className="text-gray-900 text-[32px] font-bold p-[12px] text-center md:text-right lg:text-[40px]">
 								What I do
 							</h3>
-							<div className="flex flex-col gap-[24px] p-[12px] md:flex-row">
-								{/* CARDS */}
-								{/* Slide In Section */}
-								<motion.div
-									className="flex flex-col flex-1/2 gap-[10px] p-8 bg-white rounded-3xl shadow-sm border border-gray-50"
-									initial={{ opacity: 0, x: -100 }}
-									whileInView={{ opacity: 1, x: 0 }}
-									transition={{ duration: 0.8 }}
-									viewport={{ once: true, amount: 0.3 }}
-								>
-									<h4 className="p-[10px] text-center text-[24px] font-medium">
-										Software Development
-									</h4>
-									{/* <h6 className="text-[18px] font-medium">
-										The Engine Under the Hood
-									</h6> */}
-									{/* <p className="text-[14px] text-justify lg:text-[16px]">{`If you need someone to handle the research and development of your application, I’d be glad to help with my skills and experience.`}</p> */}
-									<p className="text-[14px] text-justify lg:text-[16px]">{`I build robust, scalable applications with a focus on performance and maintainability. From architecting cross-platform mobile solutions to streamlining deployment pipelines, I ensure the logic is as seamless as the user experience.`}</p>
-									{/* <p className="text-[14px] text-justify lg:text-[16px]">{`Mobile & Web Apps: Crafting high-performance applications using modern frameworks like Expo and React Native.`}</p> */}
-								</motion.div>
-								<motion.div
-									className="flex flex-col flex-1/2 gap-[10px] p-8 bg-white rounded-3xl shadow-sm border border-gray-50"
-									initial={{ opacity: 0, x: -100 }}
-									whileInView={{ opacity: 1, x: 0 }}
-									transition={{ duration: 0.8 }}
-									viewport={{ once: true, amount: 0.3 }}
-								>
-									<h4 className="p-[10px] text-center text-[24px] font-medium">
-										UX/UI Design
-									</h4>
-									{/* <p className="text-[14px] text-justify lg:text-[16px]">{`An effective UI/UX not only captures attention but also conveys a clear message. I focus on delivering designs that are both innovative and streamlined.`}</p> */}
-									<p className="text-[14px] text-justify lg:text-[16px]">{`Design is more than just aesthetics, it’s about how a product feels and functions. I focus on creating intuitive interfaces that turn complex data into actionable insights through thoughtful interaction and visual clarity.`}</p>
-								</motion.div>
-							</div>
+							<WhatIDoCards />
 						</div>
 					</div>
 					{/* TECH STACK */}
