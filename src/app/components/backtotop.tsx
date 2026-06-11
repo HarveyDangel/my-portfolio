@@ -1,6 +1,5 @@
 "use client";
 import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
 
 export default function BackToTop() {
 	const [visible, setVisible] = useState(false);
@@ -22,17 +21,13 @@ export default function BackToTop() {
 	};
 
 	return (
-		<motion.button
-			initial={{ opacity: 0, scale: 0.9 }}
-			whileInView={{ opacity: 1, scale: 1 }}
-			transition={{ duration: 0.1 }}
-			viewport={{ once: false }}
+		<button
 			onClick={scrollToTop}
-			className={`fixed bottom-6 right-6 p-3 rounded-[8px] bg-gray-800 text-white shadow-lg hover:bg-amber-500 hover:ring hover:ring-white hover:shadow-amber-400 transition ${
-				visible ? "block" : "hidden"
+			className={`fixed bottom-6 right-6 p-3 rounded-[8px] bg-inverse text-inverse shadow-lg hover:bg-amber-500 hover:ring hover:ring-white hover:shadow-amber-400 transition-all duration-100 ${
+				visible ? "opacity-100 scale-100 pointer-events-auto" : "opacity-0 scale-90 pointer-events-none"
 			}`}
 		>
 			↑
-		</motion.button>
+		</button>
 	);
 }

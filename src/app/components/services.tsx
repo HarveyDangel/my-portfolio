@@ -6,13 +6,13 @@ export default function Services() {
 		<>
 			<div className="w-full max-w-7xl flex justify-center px-[20px] py-[50px] lg:px-[110px] lg: place-self-center gap-[20px]">
 				<div className="w-full">
-					<h2 className="place-self-end text-[36px] lg:text-[40px] lg:text-left font-bold text-[#F7F9FC] mb-[20px]">
+					<h2 className="place-self-end text-[36px] lg:text-[40px] lg:text-left font-bold text-inverse mb-[20px]">
 						What I do
 					</h2>
 					<div className="flex flex-col lg:flex-row gap-[10px] lg:gap-[20px]">
 						<GlassPane>
 							<div className="p-[16px]">
-								<h2 className="text-[24px] text-center lg:text-[28px] font-bold text-[#F7F9FC] mb-[16px]">
+								<h2 className="text-[24px] text-center lg:text-[28px] font-bold text-inverse mb-[16px]">
 									Software Development
 								</h2>
 								<p>
@@ -22,7 +22,7 @@ export default function Services() {
 						</GlassPane>
 						<GlassPane>
 							<div className="p-[16px]"> 
-								<h2 className="text-[24px] text-center lg:text-[28px] font-bold text-[#F7F9FC] mb-[20px]">
+								<h2 className="text-[24px] text-center lg:text-[28px] font-bold text-inverse mb-[20px]">
 									UI/UX Design
 								</h2>
 								<p>

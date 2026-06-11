@@ -1,28 +1,20 @@
-"use client";
-
 import React from "react";
 import Image from "next/image";
 import { projects } from "../data/projects";
-import { motion } from "framer-motion";
+import ScrollAnimation from "./scroll-animation";
 
 import GlassPane from "./ui/glasspane";
 
 export default function Portfolio() {
 	return (
 		<>
-			<div className="py-[36px] px-[12px] flex flex-col gap-[24px] bg-white lg:py-[54px]">
+			<div className="py-[36px] px-[12px] flex flex-col gap-[24px] bg-card lg:py-[54px]">
 				<div className="max-w-6xl mx-auto">
 					<h3 className="text-[32px] font-bold p-[12px]">Projects</h3>
 
 					<div className="grid grid-cols-1 gap-6">
 						{projects.map((project) => (
-							<motion.div
-								key={project.id}
-								initial={{ opacity: 0, y: 50 }}
-								whileInView={{ opacity: 1, y: 0 }}
-								transition={{ duration: 0.8 }}
-								viewport={{ once: true }} // Animate only once when in view
-							>
+							<ScrollAnimation key={project.id} animation="fade-in-up">
 								<GlassPane className=" rounded-3xl overflow-hidden md:grid md:grid-cols-2">
 									<Image
 										src={project.imageUrl}
@@ -39,46 +31,36 @@ export default function Portfolio() {
 											{project.technologies.map((tech, index) => (
 												<span
 													key={index}
-													className="text-[8px] md:text-[12px] px-2 py-1 bg-slate-800 text-white rounded"
+													className="text-[8px] md:text-[12px] px-2 py-1 bg-inverse text-inverse rounded"
 												>
 													{tech}
 												</span>
 											))}
 										</div>
-										<p className="text-gray-700 text-[14px] line-clamp-2 md:text-[16px]">
+										<p className="text-secondary text-[14px] line-clamp-2 md:text-[16px]">
 											{project.description}
 										</p>
 										<div className="flex space-x-4 bottom-0 mt-auto">
-											{/* {project.liveUrl && (
-                                    <a
-                                       href={project.liveUrl}
-                                       target="_blank"
-                                       rel="noopener noreferrer"
-                                       className="text-blue-600 dark:text-blue-400 hover:underline"
-                                    >
-                                       Live Demo
-                                    </a>
-                                 )} */}
 											{project.githubUrl && (
 												<a
 													href={project.githubUrl}
 													target="_blank"
 													rel="noopener noreferrer"
-													className="text-blue-600 dark:text-blue-400 hover:underline"
+													className="no-link-border text-link hover:underline"
 												>
 													Source Code
 												</a>
 											)}
 											<a
 												href={`/projects/${project.slug}`}
-												className="text-blue-600 dark:text-blue-400 hover:underline mr-4"
+												className="no-link-border text-link hover:underline mr-4"
 											>
 												View Details
 											</a>
 										</div>
 									</div>
 								</GlassPane>
-							</motion.div>
+							</ScrollAnimation>
 						))}
 					</div>
 				</div>

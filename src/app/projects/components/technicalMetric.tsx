@@ -15,13 +15,13 @@ export default function TechMetrics({ metrics }: { metrics: TechMetricsData }) {
 	const metricsArray = Object.values(metrics);
 
 	return (
-		<div className="rounded-3xl bg-gray-900 p-6 md:p-8 flex flex-col justify-between text-white shadow-xl shadow-slate-300/10">
+		<div className="rounded-3xl bg-inverse p-6 md:p-8 flex flex-col justify-between text-inverse shadow-xl shadow-slate-300/10">
 			<div>
 				{/* Label and Title */}
 				<span className="text-[10px] font-bold uppercase tracking-widest text-amber-400 mb-2 block">
 					Key Metrics
 				</span>
-				<h3 className="text-xl font-bold text-white mb-6">
+				<h3 className="text-xl font-bold text-inverse mb-6">
 					Software Integrity
 				</h3>
 			</div>
@@ -31,7 +31,7 @@ export default function TechMetrics({ metrics }: { metrics: TechMetricsData }) {
 				{metricsArray.map((item, index) => (
 					<div key={index} className="flex flex-col">
 						{/* The Metric Title (e.g., Security Audit) */}
-						<p className="text-[10px] uppercase tracking-wider text-slate-400 font-medium">
+						<p className="text-[10px] uppercase tracking-wider text-tertiary font-medium">
 							{item.title}
 						</p>
 
@@ -41,7 +41,7 @@ export default function TechMetrics({ metrics }: { metrics: TechMetricsData }) {
 						</p>
 
 						{/* The Technical Detail (e.g., SQL Injection prevention) */}
-						<p className="text-[11px] md:text-xs text-slate-300 leading-relaxed mt-2 text-balance opacity-80">
+						<p className="text-[11px] md:text-xs text-tertiary leading-relaxed mt-2 text-balance opacity-80">
 							{item.details}
 						</p>
 					</div>

@@ -4,6 +4,8 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import { Sun, Moon } from "lucide-react";
+import { useTheme } from "../../context/ThemeContext";
 
 const navLinks = [
    { name: "About me", href: "#about" },
@@ -27,7 +29,7 @@ const MobileMenu = ({
    onClose: () => void;
    isProjectPage: boolean;
 }) => {
-   // Determine which links to use based on the current page
+   const { darkMode, toggleDarkMode } = useTheme();
    const currentLinks = isProjectPage ? navLinksProjectPage : navLinks;
 
    return (
@@ -35,20 +37,19 @@ const MobileMenu = ({
          {isOpen && (
             <motion.div
                key="mobile-nav"
-               className="md:hidden fixed inset-0 backdrop-blur-md bg-gray-100/60 z-50 flex flex-col"
+               className="md:hidden fixed inset-0 backdrop-blur-md bg-elevated z-50 flex flex-col"
                initial={{ opacity: 0, y: -20 }}
                animate={{ opacity: 1, y: 0 }}
                exit={{ opacity: 0, y: -20 }}
                transition={{ duration: 0.3, ease: "easeInOut" }}
             >
                <div className="flex justify-end p-4">
-                  <button onClick={onClose} className="text-2xl text-gray-900">
+                  <button onClick={onClose} className="text-2xl text-primary">
                      ✕
                   </button>
                </div>
                <div className="flex flex-col items-center justify-center flex-1 gap-[24px]">
-                  {/* Dynamic Heading inside Mobile Menu */}
-                  <span className="text-xs uppercase tracking-widest text-gray-500 mb-4">
+                  <span className="text-xs uppercase tracking-widest text-tertiary mb-4">
                      {isProjectPage ? "Project Menu" : "Main Menu"}
                   </span>
 
@@ -56,12 +57,20 @@ const MobileMenu = ({
                      <Link
                         key={link.name}
                         href={link.href}
-                        className="text-xl font-medium hover:text-amber-500"
+                        className="no-link-border text-xl font-medium nav-link"
                         onClick={onClose}
                      >
                         {link.name}
                      </Link>
                   ))}
+
+                  <button
+                     onClick={toggleDarkMode}
+                     className="mt-8 p-3 rounded-xl bg-card text-primary shadow-sm hover:text-amber-500 transition-colors"
+                     aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"}
+                  >
+                     {darkMode ? <Sun size={24} /> : <Moon size={24} />}
+                  </button>
                </div>
             </motion.div>
          )}
@@ -72,44 +81,50 @@ const MobileMenu = ({
 export function Navbar() {
    const [isMenuOpen, setIsMenuOpen] = useState(false);
    const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+   const { darkMode, toggleDarkMode } = useTheme();
 
    const pathname = usePathname();
    const isProjectPage = pathname.startsWith("/projects");
 
    return (
       <>
-         {/* Pass the isProjectPage prop here */}
          <MobileMenu 
             isOpen={isMenuOpen} 
             onClose={() => setIsMenuOpen(false)} 
             isProjectPage={isProjectPage} 
          />
 
-         <nav className="flex justify-between items-center bg-gray-100/60 backdrop-blur-md px-4 py-6 sticky top-0 z-50 max-w-8xl">
-            <div className="w-full max-w-6xl mx-auto grid grid-cols-5 items-center">
-               <h1 className="col-span-4 text-[16px] font-bold md:text-2xl md:col-span-1">
-                  <Link href="/">
+         <nav className="flex justify-between items-center bg-elevated backdrop-blur-md px-4 py-6 sticky top-0 z-50 max-w-8xl">
+            <div className="w-full max-w-6xl mx-auto flex items-center">
+               <h1 className="text-[16px] font-bold md:text-2xl flex-1 md:flex-none">
+                  <Link href="/" className="no-link-border nav-link">
                      {isProjectPage ? "← Back Home" : "Harb Coded"}
                   </Link>
                </h1>
 
-               {/* Desktop Menu Logic */}
-               <div className="hidden md:flex gap-[24px] justify-center text-gray-900 text-[16px] col-span-3">
-                  {(isProjectPage ? navLinksProjectPage : navLinks).map((link) => (
-                     <Link
-                        key={link.name}
-                        href={link.href}
-                        className="hover:text-amber-500"
-                     >
-                        {link.name}
-                     </Link>
-                  ))}
-               </div>
+                <div className="hidden md:flex gap-[24px] justify-center text-[16px] mx-auto">
+                   {(isProjectPage ? navLinksProjectPage : navLinks).map((link) => (
+                       <Link
+                          key={link.name}
+                          href={link.href}
+                          className="no-link-border nav-link"
+                       >
+                          {link.name}
+                       </Link>
+                   ))}
+                </div>
 
-               <div className="md:hidden justify-self-end">
+               <div className="flex items-center gap-3">
+                  <button
+                     onClick={toggleDarkMode}
+                     className="p-2 rounded-lg text-primary hover:text-amber-500 hover:bg-card transition-colors"
+                     aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"}
+                  >
+                     {darkMode ? <Sun size={20} /> : <Moon size={20} />}
+                  </button>
                   <motion.button
                      onClick={toggleMenu}
-                     className="text-gray-900 text-[24px] hover:text-amber-500"
+                     className="md:hidden text-primary text-[24px] hover:text-amber-500"
                      whileTap={{ scale: 0.9 }}
                      animate={{ rotate: isMenuOpen ? 90 : 0 }}
                   >

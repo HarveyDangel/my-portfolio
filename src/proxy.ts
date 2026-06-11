@@ -2,6 +2,8 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
+const isDev = process.env.NODE_ENV === "development";
+
 export function proxy(request: NextRequest) {
 	// 1. Create a secure random string (Nonce)
 	const nonce = Buffer.from(crypto.randomUUID()).toString("base64");
@@ -10,18 +12,22 @@ export function proxy(request: NextRequest) {
 	const cspHeader = `
     default-src 'self';
     script-src 'self' 'nonce-${nonce}' 'strict-dynamic' ${
-		process.env.NODE_ENV === "development" ? "'unsafe-eval'" : ""
+		isDev ? "'unsafe-eval'" : ""
 	};
     style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
     img-src 'self' blob: data: https://images.unsplash.com https://res.cloudinary.com;
     font-src 'self' https://fonts.gstatic.com;
     frame-src 'self';
     object-src 'none';
-    connect-src 'self' https://www.google-analytics.com;
+    connect-src 'self' ${
+		isDev
+			? "ws://localhost:* wss://localhost:* http://localhost:* http://127.0.0.1:*"
+			: ""
+	} https://www.google-analytics.com;
     base-uri 'self';
     form-action 'self';
     frame-ancestors 'none';
-    upgrade-insecure-requests;
+    ${isDev ? "" : "upgrade-insecure-requests;"}
   `
 		.replace(/\s{2,}/g, " ")
 		.trim();
