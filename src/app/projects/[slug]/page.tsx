@@ -68,7 +68,7 @@ export default async function ProjectDetail({ params }: Props) {
 						<ProjectHero project={project} />
 					</div>
 					<div className="bg-gray-900 text-white font-light text-[12px] md:text-[14px]">
-						<div className="md:flex justify-around p-5">
+						<div className="md:flex justify-around p-5 max-w-6xl mx-auto">
 							<p>Role: {project.role}</p>
 							<p>Platform: {project.platform}</p>
 							<p>Timeline: {project.timeline}</p>
